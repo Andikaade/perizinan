@@ -31,7 +31,7 @@ class KontakMasuk extends Mailable
     {
         return new Envelope(
         from: new Address($this->data['email'], $this->data['nama']),
-        subject: 'Kontak Website: ' . $this->data['subjek'],
+        subject: 'Perizinan Tata Ruang: ' . $this->data['subjek'],
     );
     }
 
