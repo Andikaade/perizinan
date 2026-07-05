@@ -20,8 +20,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('jenis_perizinan'); // Contoh: IMB, SIUP, dll
             $table->date('tanggal_diajukan'); // Tanggal pengajuan
-            $table->date('tanggal_terbit')->nullable(); // Tanggal terbit (bisa kosong dulu)
-            $table->enum('status', ['proses', 'disetujui', 'ditolak'])->default('proses'); // Status izin
+            $table->enum('status', ['proses', 'selesai', 'ditolak'])->default('proses'); // Status izin
             $table->text('keterangan')->nullable();
             $table->timestamps();
         });

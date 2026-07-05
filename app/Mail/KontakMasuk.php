@@ -43,7 +43,7 @@ class KontakMasuk extends Mailable
         return new Content(
             view: 'emails.kontak',
             with: [
-                'data' => $this->data, 
+                'data' => $this->data,
             ],
         );
     }

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.front')
 
 @section('title', 'Perizinan Tata Ruang - Kab. Sijunjung')
 
@@ -14,7 +14,7 @@
                                 Di Website <span class="text-custom-yellow"> Perizinan Tata Ruang </span>Kab. <span class="text-custom-yellow"> Sijunjung </span>
                             </h1>
                             <p class="support">Silahkan Masukan no antrian anda</p>
-                            <div class="col-12 col-md-10 col-lg-9"> 
+                            <div class="col-12 col-md-10 col-lg-9">
                                 <form action="" method="POST" class="d-flex gap-2" role="search">
                                     @csrf
                                     <input class="form-control px-4 py-2 input-antrian" type="text" name="no_antrian" placeholder="Masukan no antrian" value="{{ $keyword ?? '' }}" required>
@@ -41,7 +41,7 @@
                     <p class="text-muted">Ikuti 3 tahapan mudah berikut untuk mengurus kesesuaian tata ruang Anda di Kabupaten Sijunjung.</p>
                 </div>
             </div>
-            
+
             <div class="row align-items-center mb-5 g-4 text-lg-start text-center">
                 <div class="col-lg-6 order-1">
                     <div class="position-relative d-inline-block w-100">
@@ -100,37 +100,37 @@
 
     <section class="tentang_kami py-5" id="tentang_kami">
         <div class="container">
-            <div class="row align-items-center justify-content-between g-4"> 
-                
+            <div class="row align-items-center justify-content-between g-4">
+
                 <div class="col-lg-6">
                     <h2 class="section-title mb-4">Tentang Kabupaten Sijunjung</h2>
-                    
+
                     <p class="support mb-3">
-                        <strong>Kabupaten Sijunjung</strong> (dijuluki <em>Ranah Lansek Manih</em>) adalah salah satu kabupaten di 
-                        Provinsi Sumatera Barat yang beribu kota di Muaro Sijunjung. Wilayah ini dikenal 
+                        <strong>Kabupaten Sijunjung</strong> (dijuluki <em>Ranah Lansek Manih</em>) adalah salah satu kabupaten di
+                        Provinsi Sumatera Barat yang beribu kota di Muaro Sijunjung. Wilayah ini dikenal
                         sebagai jalur penghubung strategis antara provinsi Jambi dan Riau.
                     </p>
                     <p class="support mb-3">
-                        <strong>Wilayah & Pemerintahan:</strong> Terdiri dari 8 kecamatan, 61 nagari, dan 1 desa. 
-                        Kecamatan utamanya meliputi Kupitan, IV Nagari, Koto VII, Sumpur Kudus, Sijunjung, 
+                        <strong>Wilayah & Pemerintahan:</strong> Terdiri dari 8 kecamatan, 61 nagari, dan 1 desa.
+                        Kecamatan utamanya meliputi Kupitan, IV Nagari, Koto VII, Sumpur Kudus, Sijunjung,
                         Lubuk Tarok, Tanjung Gadang, dan Kamang Baru.
                     </p>
                     <p class="support mb-4">
-                        <strong>Potensi Ekonomi & Pariwisata:</strong> Sijunjung merupakan sentra penghasil karet terbesar di Sumatera Barat. 
-                        Selain sektor pertanian, salah satu daya tarik utamanya adalah <em>Perkampungan Adat Sijunjung</em>, 
+                        <strong>Potensi Ekonomi & Pariwisata:</strong> Sijunjung merupakan sentra penghasil karet terbesar di Sumatera Barat.
+                        Selain sektor pertanian, salah satu daya tarik utamanya adalah <em>Perkampungan Adat Sijunjung</em>,
                         yang berhasil meraih penghargaan sebagai Desa Wisata Berkelas Dunia pada ajang Anugerah Desa Wisata Indonesia.
                     </p>
                 </div>
 
                 <div class="col-lg-5">
                     <div class="map-container shadow-sm rounded">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255312.35520336215!2d101.14441499577782!3d-0.6698971485661605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2b0051d9319e71%3A0x3039d80b220cc70!2sKabupaten%20Sijunjung%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1718131200000!5m2!1sid!2sid" 
-                            width="100%" 
-                            height="350" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255312.35520336215!2d101.14441499577782!3d-0.6698971485661605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2b0051d9319e71%3A0x3039d80b220cc70!2sKabupaten%20Sijunjung%2C%20Sumatera%20Barat!5e0!3m2!1sid!2sid!4v1718131200000!5m2!1sid!2sid"
+                            width="100%"
+                            height="350"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
@@ -200,10 +200,10 @@
                     <div class="card p-4 shadow-sm border-0 text-white h-100" style="background: linear-gradient(135deg, #111827, #1f2937); border-radius: 12px;">
                         <h4 class="fw-bold mb-3 text-warning">Respon Cepat via WhatsApp</h4>
                         <p class="text-secondary small mb-4">Untuk konsultasi langsung yang lebih cepat dan interaktif dengan petugas, Anda dapat mengklik tombol WhatsApp di bawah ini:</p>
-                        
-                        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Perizinan%20Tata%20Ruang%20Kab.%20Sijunjung,%20saya%20ingin%20bertanya..." 
-                        target="_blank" 
-                        class="btn btn-success d-flex align-items-center justify-content-center gap-2 fw-bold py-3 mb-4 border-0 shadow" 
+
+                        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Perizinan%20Tata%20Ruang%20Kab.%20Sijunjung,%20saya%20ingin%20bertanya..."
+                        target="_blank"
+                        class="btn btn-success d-flex align-items-center justify-content-center gap-2 fw-bold py-3 mb-4 border-0 shadow"
                         style="background-color: #25D366; border-radius: 8px; transition: 0.3s;">
                             <span style="font-size: 1.2rem;">💬</span> Hubungi via WhatsApp Chat
                         </a>
