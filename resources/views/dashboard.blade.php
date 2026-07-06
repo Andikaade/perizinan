@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
+    {{-- <x-slot name="header">
         <h2 class="font-bold text-xl text-slate-800 leading-tight">
             {{ __('Ringkasan Data Perizinan') }}
         </h2>
-    </x-slot>
+    </x-slot> --}}
 
     <div class="mb-6 bg-slate-900 text-white rounded-xl shadow-md p-5 flex items-center gap-4 border-l-4 border-blue-500">
         <div class="p-2 bg-slate-800 rounded-lg text-blue-400 text-lg flex items-center justify-center shrink-0">
@@ -14,7 +14,11 @@
             <p class="text-xs sm:text-sm text-slate-400 mt-0.5">Sistem berjalan normal. Silakan periksa pembaharuan permohonan masuk hari ini untuk memulai verifikasi berkas.</p>
         </div>
     </div>
-
+    <div>
+        <h2 class="font-bold text-xl text-slate-800 leading-tight mt-2 mb-2">
+            {{ __('Ringkasan Data Perizinan') }}
+        </h2>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex items-center justify-between border-t-4 border-t-blue-600">

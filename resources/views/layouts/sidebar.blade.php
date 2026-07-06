@@ -11,14 +11,16 @@
     <nav class="flex-1 p-4 space-y-1.5 text-sm overflow-y-auto">
         <p class="px-2 pb-1 text-[11px] font-bold text-slate-500 uppercase tracking-wider">Dashboard & Ringkasan</p>
 
-        <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-blue-600 text-white font-medium transition duration-200">
+        {{-- <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-blue-600 text-white font-medium transition duration-200"> --}}
+            <a href="{{ route('dashboard') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition duration-200 {{ request()->routeIs('dashboard') ? 'bg-blue-600 text-white font-medium' : 'hover:bg-slate-900 hover:text-white text-slate-400' }}">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path></svg>
             <span>Main Dashboard</span>
         </a>
 
         <p class="px-2 pt-4 pb-1 text-[11px] font-bold text-slate-500 uppercase tracking-wider">Manajemen Berkas</p>
 
-        <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-900 hover:text-white transition duration-200 text-slate-400">
+        <a href="{{ route('permohonan.index') }}"
+            class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition duration-200 {{ request()->routeIs('permohonan.*') ? 'bg-blue-600 text-white font-medium' : 'hover:bg-slate-900 hover:text-white text-slate-400' }}">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             <span>Semua Permohonan</span>
         </a>
