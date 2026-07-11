@@ -21,11 +21,11 @@
                                     <button class="btn btn-warning px-4 btn-cari-antrian" type="submit">Cari</button>
                                 </form>
                             </div>
-                            <div class="col-12 col-md-10 col-lg-9">
+                            {{-- <div class="col-12 col-md-10 col-lg-9">
                                 <div class="justify-center m-3">
                                     <a href="#" class="btn btn-success">Ajukan Permohonan</a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-lg-6 col-12 text-center">
                             <a href="#">

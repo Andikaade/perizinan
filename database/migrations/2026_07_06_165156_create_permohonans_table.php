@@ -25,7 +25,7 @@ return new class extends Migration
             $table->date('tgl_proses')->nullable();
             $table->date('tgl_selesai')->nullable();
             // Kolom Status Manajemen
-            $table->enum('status', ['Menunggu', 'Diproses', 'Selesai', 'Ditolak'])->default('Menunggu');
+            $table->enum('status', ['Menunggu', 'Proses', 'Selesai', 'Ditolak'])->default('Menunggu');
 
             $table->timestamps();
         });

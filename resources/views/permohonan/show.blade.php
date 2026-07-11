@@ -12,7 +12,7 @@
 
             <span class="px-3 py-1.5 text-xs font-bold rounded-full
                 {{ $permohonan->status == 'Menunggu' ? 'bg-blue-50 text-blue-700 border border-blue-200' : '' }}
-                {{ $permohonan->status == 'Diproses' ? 'bg-amber-50 text-amber-700 border border-amber-200' : '' }}
+                {{ $permohonan->status == 'Proses' ? 'bg-amber-50 text-amber-700 border border-amber-200' : '' }}
                 {{ $permohonan->status == 'Selesai' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : '' }}
                 {{ $permohonan->status == 'Ditolak' ? 'bg-rose-50 text-rose-700 border border-rose-200' : '' }}
             ">
@@ -27,15 +27,15 @@
             <div class="flex items-center gap-2">
                 <span class="text-sm font-bold text-slate-500 uppercase tracking-wider mr-2">Alur Berkas:</span>
 
-                @if($permohonan->status == 'Baru')
+                @if($permohonan->status == 'Menunggu')
                     <form action="{{ route('permohonan.update', $permohonan->id) }}" method="POST" class="inline">
                         @csrf @method('PATCH')
-                        <input type="hidden" name="status" value="Diproses">
+                        <input type="hidden" name="status" value="Proses">
                         <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition">
-                            ⚡ Mulai Proses Berkas
+                            ⚡ Proses Berkas
                         </button>
                     </form>
-                @elseif($permohonan->status == 'Diproses')
+                @elseif($permohonan->status == 'Proses')
                     <form action="{{ route('permohonan.update', $permohonan->id) }}" method="POST" class="inline">
                         @csrf @method('PATCH')
                         <input type="hidden" name="status" value="Selesai">
@@ -45,7 +45,7 @@
                     </form>
                 @endif
 
-                @if(in_array($permohonan->status, ['Baru', 'Diproses']))
+                @if(in_array($permohonan->status, ['Baru', 'Proses']))
                     <form action="{{ route('permohonan.update', $permohonan->id) }}" method="POST" class="inline" onsubmit="return confirm('Apakah Anda yakin ingin MENOLAK permohonan ini?')">
                         @csrf @method('PATCH')
                         <input type="hidden" name="status" value="Ditolak">

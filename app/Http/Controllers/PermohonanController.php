@@ -14,6 +14,7 @@ class PermohonanController extends Controller
     {
         // 1. Ambil keyword pencarian dari input bernama 'search'
         $search = $request->input('search');
+        $status = $request->input('status');
 
         // 2. Buat query dasar
         $query = Permohonan::query();
@@ -25,15 +26,27 @@ class PermohonanController extends Controller
                 ->orWhere('nama_pemohon', 'LIKE', "%{$search}%");
             });
         }
+        // 4. Filter berdasarkan status dari Tab yang aktif (jika ada status yang dipilih)
+        if ($status) {
+            $query->where('status', $status);
+        }
 
-        // 4. Urutkan dari yang terbaru, lalu gunakan paginate (10 data per halaman)
+        // 5. Urutkan dari yang terbaru, lalu gunakan paginate (10 data per halaman)
         // withQueryString() memastikan keyword pencarian tidak hilang saat klik tombol halaman selanjutnya
         $permohonans = $query->latest()->paginate(10)->withQueryString();
 
-        // 5. Hitung total seluruh data untuk informasi di dashboard
+        // 6. Hitung total seluruh data untuk informasi di dashboard
         $totalData = Permohonan::count();
 
-        return view('permohonan.index', compact('permohonans', 'totalData'));
+        $counts = [
+            'Semua'    => Permohonan::count(),
+            'Menunggu' => Permohonan::where('status', 'Menunggu')->count(),
+            'Proses'   => Permohonan::where('status', 'Proses')->count(),
+            'Selesai'  => Permohonan::where('status', 'Selesai')->count(),
+            'Ditolak'  => Permohonan::where('status', 'Ditolak')->count(),
+        ];
+
+        return view('permohonan.index', compact('permohonans', 'totalData' ,'counts'));
     }
 
     /**
@@ -69,7 +82,7 @@ class PermohonanController extends Controller
             'email'         => 'nullable|email|max:255',
             'jenis_surat'   => 'required|string|max:255',
             'tgl_pengajuan' => 'required|date',
-            'status'        => 'required|in:Menunggu,Diproses,Selesai,Ditolak',
+            'status'        => 'required|in:Menunggu,Proses,Selesai,Ditolak',
         ]);
 
         Permohonan::create($request->all());
@@ -102,7 +115,7 @@ class PermohonanController extends Controller
         $validated = $request->validate([
             'jenis_surat'  => 'required|string|max:255',
             'nama_pemohon' => 'required|string|max:255',
-            'alamat'       => 'required|string', // Diwajibkan agar alamat kosong bisa terisi
+            'alamat'       => 'required|string',
             'phone'        => 'nullable|string|max:20',
             'email'        => 'nullable|email|max:255',
         ]);
@@ -122,7 +135,7 @@ class PermohonanController extends Controller
     {
         // 1. Validasi data yang masuk
         $request->validate([
-            'status' => 'required|in:Baru,Diproses,Selesai,Ditolak'
+            'status' => 'required|in:Menunggu,Proses,Selesai,Ditolak'
         ]);
 
         // 2. Cari data permohonan berdasarkan ID, jika tidak ada akan memunculkan error 404 (Bukan Null Error)
@@ -132,7 +145,7 @@ class PermohonanController extends Controller
         $permohonan->status = $request->status;
 
         // Otomatis isi tanggal proses jika status diubah ke 'Diproses'
-        if ($request->status == 'Diproses') {
+        if ($request->status == 'Proses') {
             $permohonan->tgl_proses = now();
         }
 

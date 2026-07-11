@@ -1,9 +1,9 @@
 <x-app-layout>
     <div class="container mx-auto px-4 py-6">
-        <!-- HEADER HALAMAN (Sudah Ada) -->
+        <!-- HEADER HALAMAN -->
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-xl font-bold text-slate-800">Daftar Semua Permohonan</h2>
-            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition">
+            <a href="{{ route('permohonan.create') }}" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition">
                 + Tambah Permohonan Baru
             </a>
         </div>
@@ -12,14 +12,27 @@
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
 
             <!-- BAGIAN ATAS TABEL: TOTAL DATA & FORM PENCARIAN -->
-            <div class="p-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-slate-50/50">
+            <div class="p-5 border-b border-slate-200 flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-slate-50/50">
                 <div>
                     <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Data Tersimpan: {{ $totalData }}</p>
                 </div>
 
-                <!-- FORM PENCARIAN -->
-                <form action="{{ route('permohonan.index') }}" method="GET" class="flex items-center gap-2 max-w-sm w-full">
-                    <div class="relative w-full">
+                <!-- FORM PENCARIAN & DROPDOWN STATUS -->
+                <form action="{{ route('permohonan.index') }}" method="GET" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 max-w-2xl w-full md:justify-end">
+
+                    <!-- FITUR DROPDOWN STATUS -->
+                    <div class="w-full sm:w-48">
+                        <select name="status" onchange="this.form.submit()" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500 text-slate-700 font-medium">
+                            <option value="">-- Semua Status --</option>
+                            <option value="Menunggu" {{ request('status') == 'Menunggu' ? 'selected' : '' }}>⏳ Menunggu ({{ $counts['Menunggu'] }})</option>
+                            <option value="Proses" {{ request('status') == 'Proses' ? 'selected' : '' }}>⚡ Proses ({{ $counts['Proses'] }})</option>
+                            <option value="Selesai" {{ request('status') == 'Selesai' ? 'selected' : '' }}>✅ Selesai ({{ $counts['Selesai'] }})</option>
+                            <option value="Ditolak" {{ request('status') == 'Ditolak' ? 'selected' : '' }}>❌ Ditolak ({{ $counts['Ditolak'] }})</option>
+                        </select>
+                    </div>
+
+                    <!-- INPUT TEKS PENCARIAN -->
+                    <div class="relative w-full sm:w-64">
                         <input type="text" name="search" value="{{ request('search') }}"
                                class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 placeholder-slate-400"
                                placeholder="Cari No. Pengajuan / Nama...">
@@ -30,14 +43,18 @@
                             </svg>
                         </div>
                     </div>
-                    @if(request('search'))
-                        <a href="{{ route('permohonan.index') }}" class="px-3 py-2 bg-slate-200 hover:bg-slate-300 text-slate-600 text-xs font-semibold rounded-lg transition">
-                            Reset
-                        </a>
-                    @endif
-                    <button type="submit" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold rounded-lg shadow-sm transition">
-                        Cari
-                    </button>
+
+                    <!-- TOMBOL AKSI -->
+                    <div class="flex items-center gap-2">
+                        @if(request('search') || request('status'))
+                            <a href="{{ route('permohonan.index') }}" class="px-3 py-2 bg-slate-200 hover:bg-slate-300 text-slate-600 text-xs font-semibold rounded-lg transition text-center whitespace-nowrap">
+                                Reset Filter
+                            </a>
+                        @endif
+                        <button type="submit" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold rounded-lg shadow-sm transition w-full sm:w-auto">
+                            Cari
+                        </button>
+                    </div>
                 </form>
             </div>
 
@@ -62,10 +79,9 @@
                             <td class="py-4 px-6 text-slate-500">{{ $p->jenis_surat }}</td>
                             <td class="py-4 px-6">{{ \Carbon\Carbon::parse($p->tgl_pengajuan)->format('d/m/Y') }}</td>
                             <td class="py-4 px-6">
-                                <!-- Badge Status Kamu -->
                                 <span class="px-2.5 py-1 rounded-full text-xs font-bold
                                     {{ $p->status == 'Menunggu' ? 'bg-blue-50 text-blue-600' : '' }}
-                                    {{ $p->status == 'Diproses' ? 'bg-amber-50 text-amber-600' : '' }}
+                                    {{ $p->status == 'Proses' ? 'bg-amber-50 text-amber-600' : '' }}
                                     {{ $p->status == 'Selesai' ? 'bg-emerald-50 text-emerald-600' : '' }}
                                     {{ $p->status == 'Ditolak' ? 'bg-rose-50 text-rose-600' : '' }}">
                                     {{ $p->status }}

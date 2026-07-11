@@ -1,91 +1,91 @@
-no,no_antiran,nama_pemohon,no_surat,deskripsi_surat,phone,alamat,created_by,tgl_pengajuan,tgl_Diproses,tgl_selesai,status,updated_by,tgl_update
-4,0004,PT. Anugrah Bina Sarana an Suradi Budi Utomo A.21,640/006/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081239195325,Jl. Merdeka No. 125 RT 03 RW 01,admin,25-Apr-2025,17-Jun-2026,18-Jun-2026,Selesai,,
-5,0005,PT. Anugrah Bina Sarana an Suradi Budi Utomo A.22,640/006/DPMPTSP/2025,Pengajuan Surat Izin,081215582299,Jl. Merdeka No. 27 RT 02 RW 11,admin,29-Apr-2025,17-Jun-2026,17-Jun-2026,Selesai,,
-6,0006,PT. Anugrah Bina Sarana an Suradi Budi Utomo A.23,640/006/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081260704930,Jl. Merdeka No. 90 RT 02 RW 09,admin,6-Apr-2025,8-Apr-2025,17-Jun-2026,Selesai,,
-7,0007,PT. Anugrah Bina Sarana an Suradi Budi Utomo A.24,640/006/DPMPTSP/2025,Pengajuan Surat Izin,081284542736,Jl. Merdeka No. 61 RT 09 RW 08,admin,9-Feb-2025,18-Jun-2026,,Diproses,,
-8,0008,PT. Anugrah Bina Sarana an Suradi Budi Utomo A.25,640/006/DPMPTSP/2025,Pengajuan Surat Izin,081298808032,Jl. Merdeka No. 127 RT 04 RW 11,admin,15-Feb-2025,,18-Jun-2026,Selesai,,
-9,0009,PT. Anugrah Bina Sarana an Suradi Budi Utomo A.26,640/006/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081281611287,Jl. Merdeka No. 26 RT 05 RW 10,admin,14-Sep-2025,18-Jun-2026,27-Jun-2026,Selesai,,
-10,0010,PT. Anugrah Bina Sarana an Suradi Budi Utomo F.04,640/064/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081217392654,Jl. Merdeka No. 2 RT 12 RW 07,admin,12-Mei-2025,,,Menunggu,,
-11,0011,Asyulinda,640/066/DPMPTSP/2025,Pengajuan Surat Izin,081211271183,Jl. Merdeka No. 62 RT 11 RW 12,admin,25-Apr-2025,17-Jun-2026,17-Jun-2026,Selesai,,
-12,0012,Slamet Riyadi,640/104/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081287918607,Jl. Merdeka No. 124 RT 01 RW 12,admin,3-Sep-2025,4-Sep-2025,9-Sep-2025,Selesai,,
-13,0013,Eni Pesma,640/096/DPMPTSP/2025,Pengajuan Surat Izin,081286871449,Jl. Merdeka No. 36 RT 03 RW 03,admin,2-Sep-2025,5-Sep-2025,18-Jun-2026,Selesai,,
-14,0014,Rozalina,640/123/DPMPTSP/2025,Pengajuan Surat Izin,081265089722,Jl. Merdeka No. 49 RT 09 RW 07,admin,25-Mei-2025,28-Mei-2025,30-Mei-2025,Selesai,,
-15,0015,Syafrial,640/168/DPMPTSP/2025,Pengajuan Surat Izin,081252212952,Jl. Merdeka No. 20 RT 08 RW 03,admin,6-Mei-2025,8-Mei-2025,10-Mei-2025,Selesai,,
-16,0016,Nurmainis,640/182/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081284835487,Jl. Merdeka No. 34 RT 10 RW 08,admin,21-Des-2025,23-Des-2025,,Ditolak,,
-17,0017,PT. Sadewa Karya Tama,640/172/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081273575276,Jl. Merdeka No. 39 RT 02 RW 09,admin,12-Okt-2025,13-Okt-2025,,Diproses,,
-18,0018,Hasban Marpaung,640/176/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081240529785,Jl. Merdeka No. 146 RT 10 RW 07,admin,12-Jun-2025,15-Jun-2025,19-Jun-2025,Selesai,,
-19,0019,Meli Susanti,640/187/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081234602895,Jl. Merdeka No. 79 RT 03 RW 12,admin,27-Apr-2025,30-Apr-2025,,Diproses,,
-20,0020,Sabirin 1,640/219/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081237651264,Jl. Merdeka No. 60 RT 08 RW 09,admin,3-Okt-2025,4-Okt-2025,,Diproses,,
-21,0021,Dian Filzah Aytis,600.1/190/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081264065258,Jl. Merdeka No. 103 RT 12 RW 07,admin,21-Feb-2025,22-Feb-2025,27-Feb-2025,Selesai,,
-22,0022,Efrida Yanti an Amelia Kartika Ningsih 1,600.1/185/DPMPTSP/2025,Pengajuan Surat Izin,081270878948,Jl. Merdeka No. 47 RT 02 RW 07,admin,30-Mar-2025,1-Apr-2025,5-Apr-2025,Selesai,,
-23,0023,Jamilus,600.1/188/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081254458648,Jl. Merdeka No. 134 RT 11 RW 02,admin,30-Jun-2025,1-Jul-2025,7-Jul-2025,Ditolak,,
-24,0024,Sabirin 2,640/218/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081242959130,Jl. Merdeka No. 59 RT 05 RW 05,admin,7-Sep-2025,10-Sep-2025,,Diproses,,
-25,0025,Annisa Tiara Sarti an Yusni,600.1/205/DPMPTSP/2025,Pengajuan Surat Izin,081287034600,Jl. Merdeka No. 4 RT 10 RW 09,admin,26-Jul-2025,28-Jul-2025,1-Agu-2025,Selesai,,
-26,0026,R. Dt. Rajo Melayu,600.1/212/DPMPTSP/2025,Pengajuan Surat Izin,081243772672,Jl. Merdeka No. 97 RT 07 RW 08,admin,2-Agu-2025,5-Agu-2025,,Diproses,,
-27,0027,Nur Eyoni,600.1/211/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081261833155,Jl. Merdeka No. 146 RT 06 RW 10,admin,12-Mei-2025,14-Mei-2025,,Diproses,,
-28,0028,Syafrita,600.1/218/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081235729002,Jl. Merdeka No. 149 RT 07 RW 06,admin,1-Nov-2025,4-Nov-2025,,Diproses,,
-29,0029,Rio Andika Saputra,600.1/219/DPMPTSP/2025,Pengajuan Surat Izin,081294288459,Jl. Merdeka No. 20 RT 08 RW 01,admin,9-Okt-2025,12-Okt-2025,,Diproses,,
-30,0030,Irvandry Fernandes,600.1/222/DPMPTSP/2025,Pengajuan Surat Izin,081247924153,Jl. Merdeka No. 88 RT 07 RW 02,admin,4-Nov-2025,6-Nov-2025,,Diproses,,
-31,0031,Ayu Septian Ashari,600.1/221/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081248984610,Jl. Merdeka No. 58 RT 08 RW 11,admin,11-Mar-2025,13-Mar-2025,,Diproses,,
-32,0032,Syafril Syaraf,600.1/220/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081224091214,Jl. Merdeka No. 146 RT 11 RW 02,admin,17-Sep-2025,19-Sep-2025,23-Sep-2025,Ditolak,,
-33,0033,Fajri Rahmawati an Jasmani,600.1/224/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081286102693,Jl. Merdeka No. 65 RT 06 RW 12,admin,17-Apr-2025,19-Apr-2025,23-Apr-2025,Selesai,,
-34,0034,Firman Arif,600.1/226/DPMPTSP/2025,Pengajuan Surat Izin,081276064689,Jl. Merdeka No. 131 RT 05 RW 06,admin,29-Jul-2025,31-Jul-2025,4-Agu-2025,Ditolak,,
-35,0035,Ajis Putra Nedi an Een,600.1/241/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081243353785,Jl. Merdeka No. 136 RT 04 RW 06,admin,13-Agu-2025,14-Agu-2025,20-Agu-2025,Ditolak,,
-36,0036,Darlisma,600.1/243/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081265754082,Jl. Merdeka No. 56 RT 07 RW 11,admin,6-Apr-2025,9-Apr-2025,18-Jun-2026,Selesai,,
-37,0037,Syahrial,600.1/239/DPMPTSP/2025,Pengajuan Surat Izin,081210981206,Jl. Merdeka No. 110 RT 01 RW 08,admin,31-Jan-2025,2-Feb-2025,4-Feb-2025,Selesai,,
-38,0038,Hamdani Mustafa,600.1/265/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081260111390,Jl. Merdeka No. 135 RT 12 RW 05,admin,15-Des-2025,17-Des-2025,,Diproses,,
-39,0039,Ajis Putra Nedi an Erlis,600.1/277/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081266389047,Jl. Merdeka No. 85 RT 11 RW 09,admin,25-Mar-2025,26-Mar-2025,1-Apr-2025,Selesai,,
-40,0040,Arnilas,600.1/278/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081238572834,Jl. Merdeka No. 25 RT 02 RW 10,admin,14-Agu-2025,15-Agu-2025,17-Agu-2025,Selesai,,
-41,0041,Fajri Rahmawati an Annisa Tiara,600.1/288/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081278669575,Jl. Merdeka No. 21 RT 03 RW 02,admin,13-Jul-2025,14-Jul-2025,16-Jul-2025,Selesai,,
-42,0042,Joko Siswoyo,600.1/299/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081284404824,Jl. Merdeka No. 63 RT 06 RW 09,admin,22-Okt-2025,25-Okt-2025,,Diproses,,
-43,0043,Gusyandri,600.1/302/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081278722329,Jl. Merdeka No. 90 RT 07 RW 03,admin,5-Jun-2025,7-Jun-2025,,Diproses,,
-44,0044,Ermita,600.1/301/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081226390729,Jl. Merdeka No. 140 RT 10 RW 12,admin,4-Agu-2025,5-Agu-2025,,Diproses,,
-45,0045,Ekaneti Pitri,600.1/310/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081273651891,Jl. Merdeka No. 111 RT 08 RW 08,admin,17-Jun-2025,19-Jun-2025,18-Jun-2026,Selesai,,
-46,0046,Efrida Yanti an Amelia Kartika Ningsih 2,600.1/316/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081276618929,Jl. Merdeka No. 27 RT 07 RW 09,admin,13-Sep-2025,15-Sep-2025,18-Sep-2025,Selesai,,
-47,0047,Sukadi an Suyadi,600.1/330/DPMPTSP/2025,Pengajuan Surat Izin,081241974676,Jl. Merdeka No. 53 RT 11 RW 05,admin,4-Agu-2025,5-Agu-2025,10-Agu-2025,Selesai,,
-48,0048,Ramadhan Fitria,600.1/332/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081232689349,Jl. Merdeka No. 117 RT 02 RW 12,admin,5-Apr-2025,7-Apr-2025,13-Apr-2025,Selesai,,
-49,0049,Rusdi Alas Lesmana an Sari Ayo,600.1/331/DPMPTSP/2025,Pengajuan Surat Izin,081280039259,Jl. Merdeka No. 62 RT 08 RW 05,admin,31-Jan-2025,1-Feb-2025,8-Feb-2025,Selesai,,
-50,0050,Sukadi an Maryoto,600.1/329/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081227517826,Jl. Merdeka No. 103 RT 03 RW 01,admin,18-Nov-2025,20-Nov-2025,25-Nov-2025,Selesai,,
-51,0051,Hendriko Putra,600.1/335/DPMPTSP/2025,Pengajuan Surat Izin,081247557883,Jl. Merdeka No. 9 RT 08 RW 06,admin,11-Agu-2025,12-Agu-2025,19-Agu-2025,Ditolak,,
-52,0052,Minarsih,600.1/344/DPMPTSP/2025,Pengajuan Surat Izin,081238813485,Jl. Merdeka No. 18 RT 03 RW 05,admin,15-Mei-2025,17-Mei-2025,22-Mei-2025,Selesai,,
-53,0053,William Harbensyah,600.1/346/DPMPTSP/2025,Pendaftaran Tanda Daftar Perusahaan (TDP),081257752645,Jl. Merdeka No. 134 RT 01 RW 02,admin,20-Mar-2025,23-Mar-2025,,Diproses,,
-54,0054,Rasyid El Ridha,600.1/345/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081280118943,Jl. Merdeka No. 129 RT 07 RW 08,admin,4-Jun-2025,5-Jun-2025,11-Jun-2025,Selesai,,
-55,0055,Wirma Hanita,600.3.3.2/364/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081283239114,Jl. Merdeka No. 9 RT 09 RW 05,admin,31-Jan-2025,2-Feb-2025,,Diproses,,
-56,0056,PT. Pincuran Rawang Permai,600.1/358/DPMPTSP/2025,Pengajuan Surat Izin,081240577061,Jl. Merdeka No. 145 RT 05 RW 01,admin,30-Jul-2025,2-Agu-2025,7-Agu-2025,Selesai,,
-57,0057,Yuli Rozana,600.3.3.2/367/DPMPTSP/2025,Pengajuan Surat Izin,081234209358,Jl. Merdeka No. 58 RT 09 RW 09,admin,20-Des-2025,21-Des-2025,27-Des-2025,Ditolak,,
-58,0058,Sri Yulanda 1,600.3.3.2/369/DPMPTSP/2025,Permohonan Izin Mendirikan Bangunan (IMB),081256019065,Jl. Merdeka No. 126 RT 10 RW 07,admin,7-Mei-2025,8-Mei-2025,12-Mei-2025,Selesai,,
-59,0059,Sri Yulanda 2,600.3.3.2/371/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081248948327,Jl. Merdeka No. 97 RT 07 RW 02,admin,16-Jan-2025,17-Jan-2025,21-Jan-2025,Selesai,,
-60,0060,Fajri Rahmawati an Parmi,600.3.3.2/375/DPMPTSP/2025,Permohonan Izin Operasional Klinik,081226910097,Jl. Merdeka No. 108 RT 11 RW 08,admin,29-Jan-2025,1-Feb-2025,,Diproses,,
-61,0061,Irvandi Saputra,600.3.3.2/376/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081295341573,Jl. Merdeka No. 134 RT 10 RW 02,admin,17-Mar-2025,19-Mar-2025,,Diproses,,
-62,0062,Mohammad Husein 1,600.3.3.2/394/DPMPTSP/2025,Izin Gangguan Tempat Usaha,081261649739,Jl. Merdeka No. 141 RT 03 RW 12,admin,26-Mar-2025,29-Mar-2025,2-Apr-2025,Selesai,,
-63,0063,Sasmi Agamil,600.3.3.2/14/DPMPTSP/2026,Izin Gangguan Tempat Usaha,081234333665,Jl. Merdeka No. 8 RT 09 RW 05,admin,25-Des-2025,27-Des-2025,1-Jan-2026,Ditolak,,
-64,0064,Ricci Vivi Eka Sanova,600.3.3.2/15/DPMPTSP/2026,Pendaftaran Tanda Daftar Perusahaan (TDP),081216872678,Jl. Merdeka No. 104 RT 08 RW 08,admin,16-Jul-2025,19-Jul-2025,,Diproses,,
-65,0065,Nuklis,600.3.3.2/19/DPMPTSP/2026,Izin Gangguan Tempat Usaha,081244706983,Jl. Merdeka No. 142 RT 10 RW 12,admin,15-Mei-2025,16-Mei-2025,,Diproses,,
-66,0066,Iswandi,600.1/21/DPMPTSP/2026,Permohonan Izin Operasional Klinik,081290050741,Jl. Merdeka No. 92 RT 08 RW 08,admin,9-Mar-2025,10-Mar-2025,,Diproses,,
-67,0067,Hidawatil Isfanji,600.3.3.2/23/DPMPTSP/2026,Pengajuan Surat Izin,081271907925,Jl. Merdeka No. 43 RT 03 RW 07,admin,26-Des-2025,28-Des-2025,3-Jan-2026,Ditolak,,
-68,0068,Ernita,600.3.3.2/25/DPMPTSP/2026,Permohonan Izin Operasional Klinik,081266840453,Jl. Merdeka No. 46 RT 03 RW 10,admin,30-Sep-2025,2-Okt-2025,,Diproses,,
-69,0069,Sukarsi,600.3.3.2/26/DPMPTSP/2026,Permohonan Izin Operasional Klinik,081229695803,Jl. Merdeka No. 10 RT 11 RW 12,admin,7-Des-2025,10-Des-2025,15-Des-2025,Selesai,,
-70,0070,Zulhaimi,600.3.3.2/24/DPMPTSP/2026,Pengajuan Surat Izin,081254385042,Jl. Merdeka No. 2 RT 02 RW 11,admin,17-Nov-2025,20-Nov-2025,,Diproses,,
-71,0071,Kanti Prihartini,600.3.3.2/27/DPMPTSP/2026,Pendaftaran Tanda Daftar Perusahaan (TDP),081211279534,Jl. Merdeka No. 86 RT 05 RW 01,admin,2-Apr-2025,5-Apr-2025,,Diproses,,
-72,0072,Yasni. S,600.3.3.2/33/DPMPTSP/2026,Pengajuan Surat Izin,081247957152,Jl. Merdeka No. 23 RT 05 RW 10,admin,5-Des-2025,7-Des-2025,,Diproses,,
-73,0073,Enifa Maidesrita,600.1/42/DPMPTSP/2026,Pendaftaran Tanda Daftar Perusahaan (TDP),081229394949,Jl. Merdeka No. 90 RT 06 RW 03,admin,25-Sep-2025,27-Sep-2025,4-Okt-2025,Selesai,,
-74,0074,Iti Sumarni,600.1/43/DPMPTSP/2026,Pendaftaran Tanda Daftar Perusahaan (TDP),081237865951,Jl. Merdeka No. 137 RT 10 RW 08,admin,30-Okt-2025,1-Nov-2025,,Diproses,,
-75,0075,Ajis Putra Nedi an Simarni,600.3.3.2/44/DPMPTSP/2026,Izin Gangguan Tempat Usaha,081241924432,Jl. Merdeka No. 47 RT 05 RW 01,admin,1-Des-2025,2-Des-2025,9-Des-2025,Selesai,,
-76,0076,Dian Filzah Aytis an Atmiati,600.3.3.2/52/DPMPTSP/2026,Permohonan Izin Mendirikan Bangunan (IMB),081255053196,Jl. Merdeka No. 6 RT 02 RW 08,admin,7-Mar-2025,10-Mar-2025,,Diproses,,
-77,0077,"Sukadi an Sarimin, Sami, Sagiman",600.3.3.2/57/DPMPTSP/2026,Izin Gangguan Tempat Usaha,081299539405,Jl. Merdeka No. 116 RT 03 RW 07,admin,27-Jun-2025,29-Jun-2025,2-Jul-2025,Selesai,,
-78,0078,Ajis Putra Nedi an Sukar Dinalis,600.3.3.2/53/DPMPTSP/2026,Pendaftaran Tanda Daftar Perusahaan (TDP),081221026992,Jl. Merdeka No. 94 RT 11 RW 07,admin,7-Des-2025,9-Des-2025,,Diproses,,
-79,0079,Yong Hendri,600.3.3.2/63/DPMPTSP/2026,Permohonan Izin Mendirikan Bangunan (IMB),081294230576,Jl. Merdeka No. 98 RT 03 RW 06,admin,8-Mar-2025,9-Mar-2025,14-Mar-2025,Selesai,,
-80,0080,Yodion Eka Putra,600.3.3.2/69/DPMPTSP/2026,Pengajuan Surat Izin,081242145423,Jl. Merdeka No. 96 RT 05 RW 07,admin,17-Jan-2025,18-Jan-2025,22-Jan-2025,Selesai,,
-81,0081,Mohammad Husein 2,600.1/73/DPMPTSP/2026,Permohonan Izin Operasional Klinik,081296162409,Jl. Merdeka No. 133 RT 04 RW 11,admin,14-Jun-2025,16-Jun-2025,21-Jun-2025,Selesai,,
-82,0082,Rizatil Hayati,600.3.3.2/88/DPMPTSP/2026,Pengajuan Surat Izin,081231337190,Jl. Merdeka No. 129 RT 12 RW 10,admin,21-Okt-2025,23-Okt-2025,28-Okt-2025,Selesai,,
-83,0083,Nurhayati,600.3.3.2/66/DPMPTSP/2026,Permohonan Izin Mendirikan Bangunan (IMB),081261134736,Jl. Merdeka No. 20 RT 09 RW 02,admin,10-Okt-2025,11-Okt-2025,,Diproses,,
-84,0084,Sukadi an Slamet Riyadi,600.1/119/DPMPTSP/2026,Izin Gangguan Tempat Usaha,081256361509,Jl. Merdeka No. 71 RT 03 RW 06,admin,4-Des-2025,6-Des-2025,11-Des-2025,Ditolak,,
-85,0085,Yuliarni,600.1/120/DPMPTSP/2026,Permohonan Izin Mendirikan Bangunan (IMB),081231050228,Jl. Merdeka No. 57 RT 07 RW 06,admin,5-Nov-2025,7-Nov-2025,,Diproses,,
-86,0086,Umar Dt. Rajo Indo,600.3.3.2/122/DPMPTSP/2026,Permohonan Izin Mendirikan Bangunan (IMB),081262049317,Jl. Merdeka No. 100 RT 01 RW 07,admin,15-Jun-2025,16-Jun-2025,,Diproses,,
-87,0087,Buyung,600.3.3.2/123/DPMPTSP/2026,Pendaftaran Tanda Daftar Perusahaan (TDP),081285571595,Jl. Merdeka No. 84 RT 12 RW 01,admin,3-Agu-2025,6-Agu-2025,,Diproses,,
-88,0088,Rince Oktasari,600.3.3.2/102/DPMPTSP/2026,Izin Gangguan Tempat Usaha,081291673662,Jl. Merdeka No. 79 RT 08 RW 03,admin,10-Jul-2025,13-Jul-2025,,Diproses,,
-89,0089,Yondra Zubir,600.3.3.2/108/DPMPTSP/2026,Pengajuan Surat Izin,081278913934,Jl. Merdeka No. 55 RT 12 RW 03,admin,19-Sep-2025,21-Sep-2025,,Diproses,,
-90,0090,Ajis Putra Nedi an Zakaria Arif,600.3.3.2/109/DPMPTSP/2026,Permohonan Izin Mendirikan Bangunan (IMB),081276865871,Jl. Merdeka No. 147 RT 11 RW 11,admin,13-Apr-2025,15-Apr-2025,,Diproses,,
-91,0091,Baradi,600.3.3.2/138/DPMPTSP/2026,Permohonan Izin Operasional Klinik,081252168092,Jl. Merdeka No. 15 RT 05 RW 12,admin,24-Nov-2025,27-Nov-2025,,Diproses,,
-,0092,Andika,600.3.3.10/138/DPMPTSP/2026,tes,081369712870,tes,admin,21-Jun-2026,,,Diproses,,
-,0093,abdi maulana,999/006/DPMPTSP/2026,test,081249323077,test,abdi maulana,27-Jun-2026,,,Diproses,,
+﻿id;no_pengajuan;nama_pemohon;alamat;phone;email;no_surat;jenis_surat;created_by;tgl_pengajuan;tgl_proses;tgl_selesai;status;updated_by;tgl_update
+1;1;PT. Anugrah Bina Sarana an Suradi Budi Utomo A.21;Jl. Merdeka No. 138 RT 06 RW 02;81260307845;anugrahbinasara@mail.com;640/006/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;22/06/2025;17/06/2026;18/06/2026;Selesai;;
+2;2;PT. Anugrah Bina Sarana an Suradi Budi Utomo A.22;Jl. Merdeka No. 71 RT 02 RW 12;81284971619;anugrahbinasara@mail.com;640/006/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;01/10/2025;17/06/2026;17/06/2026;Selesai;;
+3;3;PT. Anugrah Bina Sarana an Suradi Budi Utomo A.23;Jl. Merdeka No. 78 RT 01 RW 11;81286175735;anugrahbinasara@mail.com;640/006/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;29/11/2025;01/12/2025;17/06/2026;Selesai;;
+4;4;PT. Anugrah Bina Sarana an Suradi Budi Utomo A.24;Jl. Merdeka No. 104 RT 12 RW 09;81226468442;anugrahbinasara@mail.com;640/006/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;09/05/2025;18/06/2026;;Diproses;;
+5;5;PT. Anugrah Bina Sarana an Suradi Budi Utomo A.25;Jl. Merdeka No. 143 RT 01 RW 10;81289803492;anugrahbinasara@mail.com;640/006/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;12/10/2025;;18/06/2026;Selesai;;
+6;6;PT. Anugrah Bina Sarana an Suradi Budi Utomo A.26;Jl. Merdeka No. 55 RT 11 RW 06;81220526208;anugrahbinasara@mail.com;640/006/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;01/02/2025;18/06/2026;27/06/2026;Selesai;;
+7;7;PT. Anugrah Bina Sarana an Suradi Budi Utomo F.04;Jl. Merdeka No. 140 RT 09 RW 11;81290803279;anugrahbinasara@mail.com;640/064/DPMPTSP/2025;Pengajuan Surat Izin;admin;23/12/2025;;;Menunggu;;
+8;8;Asyulinda;Jl. Merdeka No. 67 RT 05 RW 10;81241827337;asyulinda@mail.com;640/066/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;28/09/2025;17/06/2026;17/06/2026;Selesai;;
+9;9;Slamet Riyadi;Jl. Merdeka No. 104 RT 09 RW 04;81297863378;slametriyadi@mail.com;640/104/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;06/05/2025;09/05/2025;16/05/2025;Selesai;;
+10;10;Eni Pesma;Jl. Merdeka No. 19 RT 09 RW 05;81286607037;enipesma@mail.com;640/096/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;31/07/2025;01/08/2025;18/06/2026;Selesai;;
+11;11;Rozalina;Jl. Merdeka No. 1 RT 03 RW 11;81247051419;rozalina@mail.com;640/123/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;24/07/2025;26/07/2025;31/07/2025;Selesai;;
+12;12;Syafrial;Jl. Merdeka No. 142 RT 07 RW 02;81296630972;syafrial@mail.com;640/168/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;10/08/2025;13/08/2025;15/08/2025;Selesai;;
+13;13;Nurmainis;Jl. Merdeka No. 98 RT 04 RW 05;81256588543;nurmainis@mail.com;640/182/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;26/02/2025;27/02/2025;;Ditolak;;
+14;14;PT. Sadewa Karya Tama;Jl. Merdeka No. 62 RT 02 RW 05;81249392907;sadewakaryatama@mail.com;640/172/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;11/03/2025;12/03/2025;;Diproses;;
+15;15;Hasban Marpaung;Jl. Merdeka No. 24 RT 04 RW 11;81284525561;hasbmarpaung@mail.com;640/176/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;17/10/2025;19/10/2025;25/10/2025;Selesai;;
+16;16;Meli Susanti;Jl. Merdeka No. 112 RT 03 RW 02;81239867855;melisusanti@mail.com;640/187/DPMPTSP/2025;Pengajuan Surat Izin;admin;17/05/2025;18/05/2025;;Diproses;;
+17;17;Sabirin 1;Jl. Merdeka No. 136 RT 01 RW 05;81266792375;sabirin1@mail.com;640/219/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;10/11/2025;12/11/2025;;Diproses;;
+18;18;Dian Filzah Aytis;Jl. Merdeka No. 122 RT 01 RW 06;81261847464;difilzahaytis@mail.com;600.1/190/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;31/12/2025;03/01/2026;09/01/2026;Selesai;;
+19;19;Efrida Yanti an Amelia Kartika Ningsih 1;Jl. Merdeka No. 72 RT 10 RW 09;81244014113;efridayantiamel@mail.com;600.1/185/DPMPTSP/2025;Pengajuan Surat Izin;admin;24/02/2025;26/02/2025;03/03/2025;Selesai;;
+20;20;Jamilus;Jl. Merdeka No. 66 RT 08 RW 12;81289940268;jamilus@mail.com;600.1/188/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;02/02/2025;04/02/2025;08/02/2025;Ditolak;;
+21;21;Sabirin 2;Jl. Merdeka No. 137 RT 09 RW 03;81240932348;sabirin2@mail.com;640/218/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;05/05/2025;06/05/2025;;Diproses;;
+22;22;Annisa Tiara Sarti an Yusni;Jl. Merdeka No. 94 RT 11 RW 02;81264836165;annisatiarasart@mail.com;600.1/205/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;06/01/2025;08/01/2025;12/01/2025;Selesai;;
+23;23;R. Dt. Rajo Melayu;Jl. Merdeka No. 82 RT 03 RW 11;81288044998;rdtrajomelayu@mail.com;600.1/212/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;30/03/2025;31/03/2025;;Diproses;;
+24;24;Nur Eyoni;Jl. Merdeka No. 85 RT 04 RW 04;81298715736;nureyoni@mail.com;600.1/211/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;06/07/2025;08/07/2025;;Diproses;;
+25;25;Syafrita;Jl. Merdeka No. 122 RT 09 RW 03;81240422357;syafrita@mail.com;600.1/218/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;24/08/2025;26/08/2025;;Diproses;;
+26;26;Rio Andika Saputra;Jl. Merdeka No. 88 RT 06 RW 10;81257460761;rioandikasaputr@mail.com;600.1/219/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;05/10/2025;06/10/2025;;Diproses;;
+27;27;Irvandry Fernandes;Jl. Merdeka No. 124 RT 01 RW 06;81210440543;irvandryfernand@mail.com;600.1/222/DPMPTSP/2025;Pengajuan Surat Izin;admin;27/09/2025;28/09/2025;;Diproses;;
+28;28;Ayu Septian Ashari;Jl. Merdeka No. 63 RT 03 RW 03;81267086234;ayuseiashari@mail.com;600.1/221/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;30/09/2025;01/10/2025;;Diproses;;
+29;29;Syafril Syaraf;Jl. Merdeka No. 55 RT 03 RW 02;81229507663;syafrilsyaraf@mail.com;600.1/220/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;27/08/2025;29/08/2025;01/09/2025;Ditolak;;
+30;30;Fajri Rahmawati an Jasmani;Jl. Merdeka No. 124 RT 11 RW 02;81211790644;fajrirahmawatij@mail.com;600.1/224/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;01/01/2025;02/01/2025;05/01/2025;Selesai;;
+31;31;Firman Arif;Jl. Merdeka No. 28 RT 09 RW 03;81258495669;firmarif@mail.com;600.1/226/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;31/03/2025;03/04/2025;10/04/2025;Ditolak;;
+32;32;Ajis Putra Nedi an Een;Jl. Merdeka No. 103 RT 09 RW 09;81232303828;ajisputranediee@mail.com;600.1/241/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;25/06/2025;26/06/2025;02/07/2025;Ditolak;;
+33;33;Darlisma;Jl. Merdeka No. 143 RT 04 RW 06;81258506789;darlisma@mail.com;600.1/243/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;07/05/2025;09/05/2025;18/06/2026;Selesai;;
+34;34;Syahrial;Jl. Merdeka No. 95 RT 02 RW 01;81250844462;syahrial@mail.com;600.1/239/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;16/05/2025;18/05/2025;20/05/2025;Selesai;;
+35;35;Hamdani Mustafa;Jl. Merdeka No. 127 RT 10 RW 12;81271451302;hamdanimustafa@mail.com;600.1/265/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;09/11/2025;12/11/2025;;Diproses;;
+36;36;Ajis Putra Nedi an Erlis;Jl. Merdeka No. 43 RT 11 RW 01;81276722310;ajisputranedier@mail.com;600.1/277/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;14/12/2025;15/12/2025;19/12/2025;Selesai;;
+37;37;Arnilas;Jl. Merdeka No. 68 RT 02 RW 02;81270691971;arnilas@mail.com;600.1/278/DPMPTSP/2025;Pengajuan Surat Izin;admin;02/02/2025;04/02/2025;09/02/2025;Selesai;;
+38;38;Fajri Rahmawati an Annisa Tiara;Jl. Merdeka No. 67 RT 11 RW 01;81238582583;fajrirahmawatia@mail.com;600.1/288/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;12/09/2025;13/09/2025;19/09/2025;Selesai;;
+39;39;Joko Siswoyo;Jl. Merdeka No. 92 RT 10 RW 07;81244511026;jokosiswoyo@mail.com;600.1/299/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;20/10/2025;21/10/2025;;Diproses;;
+40;40;Gusyandri;Jl. Merdeka No. 47 RT 03 RW 04;81260547350;gusyandri@mail.com;600.1/302/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;17/04/2025;19/04/2025;;Diproses;;
+41;41;Ermita;Jl. Merdeka No. 27 RT 05 RW 04;81223756035;ermita@mail.com;600.1/301/DPMPTSP/2025;Pengajuan Surat Izin;admin;20/09/2025;22/09/2025;;Diproses;;
+42;42;Ekaneti Pitri;Jl. Merdeka No. 90 RT 03 RW 09;81264293336;ekanetipitri@mail.com;600.1/310/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;23/10/2025;26/10/2025;18/06/2026;Selesai;;
+43;43;Efrida Yanti an Amelia Kartika Ningsih 2;Jl. Merdeka No. 18 RT 10 RW 04;81288259248;efridayantiamel@mail.com;600.1/316/DPMPTSP/2025;Pengajuan Surat Izin;admin;14/01/2025;16/01/2025;22/01/2025;Selesai;;
+44;44;Sukadi an Suyadi;Jl. Merdeka No. 75 RT 09 RW 08;81267552120;sukadisuyadi@mail.com;600.1/330/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;19/06/2025;20/06/2025;27/06/2025;Selesai;;
+45;45;Ramadhan Fitria;Jl. Merdeka No. 20 RT 03 RW 03;81259573719;ramadhfitria@mail.com;600.1/332/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;19/01/2025;22/01/2025;26/01/2025;Selesai;;
+46;46;Rusdi Alas Lesmana an Sari Ayo;Jl. Merdeka No. 32 RT 06 RW 09;81217014732;rusdialaslesman@mail.com;600.1/331/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;20/11/2025;21/11/2025;28/11/2025;Selesai;;
+47;47;Sukadi an Maryoto;Jl. Merdeka No. 144 RT 12 RW 04;81287116602;sukadimaryoto@mail.com;600.1/329/DPMPTSP/2025;Permohonan Izin Operasional Klinik;admin;05/12/2025;08/12/2025;13/12/2025;Selesai;;
+48;48;Hendriko Putra;Jl. Merdeka No. 91 RT 08 RW 04;81264806224;hendrikoputra@mail.com;600.1/335/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;13/06/2025;14/06/2025;16/06/2025;Ditolak;;
+49;49;Minarsih;Jl. Merdeka No. 123 RT 10 RW 10;81266487020;minarsih@mail.com;600.1/344/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;05/03/2025;06/03/2025;10/03/2025;Selesai;;
+50;50;William Harbensyah;Jl. Merdeka No. 79 RT 01 RW 12;81264318349;williamharbensy@mail.com;600.1/346/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;17/03/2025;18/03/2025;;Diproses;;
+51;51;Rasyid El Ridha;Jl. Merdeka No. 128 RT 03 RW 08;81266755467;rasyidelridha@mail.com;600.1/345/DPMPTSP/2025;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;30/10/2025;31/10/2025;03/11/2025;Selesai;;
+52;52;Wirma Hanita;Jl. Merdeka No. 128 RT 09 RW 05;81228024665;wirmahanita@mail.com;600.3.3.2/364/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;07/12/2025;10/12/2025;;Diproses;;
+53;53;PT. Pincuran Rawang Permai;Jl. Merdeka No. 77 RT 12 RW 01;81240895889;pincurrawangper@mail.com;600.1/358/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;15/04/2025;17/04/2025;21/04/2025;Selesai;;
+54;54;Yuli Rozana;Jl. Merdeka No. 1 RT 08 RW 10;81280199877;yulirozana@mail.com;600.3.3.2/367/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;15/06/2025;16/06/2025;22/06/2025;Ditolak;;
+55;55;Sri Yulanda 1;Jl. Merdeka No. 86 RT 08 RW 01;81235969444;sriyulanda1@mail.com;600.3.3.2/369/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;05/11/2025;07/11/2025;10/11/2025;Selesai;;
+56;56;Sri Yulanda 2;Jl. Merdeka No. 53 RT 06 RW 06;81219268039;sriyulanda2@mail.com;600.3.3.2/371/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;19/10/2025;21/10/2025;27/10/2025;Selesai;;
+57;57;Fajri Rahmawati an Parmi;Jl. Merdeka No. 57 RT 01 RW 03;81217463352;fajrirahmawatip@mail.com;600.3.3.2/375/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;10/08/2025;12/08/2025;;Diproses;;
+58;58;Irvandi Saputra;Jl. Merdeka No. 138 RT 01 RW 07;81214740883;irvandisaputra@mail.com;600.3.3.2/376/DPMPTSP/2025;Permohonan Izin Mendirikan Bangunan (IMB);admin;24/05/2025;27/05/2025;;Diproses;;
+59;59;Mohammad Husein 1;Jl. Merdeka No. 81 RT 10 RW 08;81226693972;mohammadhusein1@mail.com;600.3.3.2/394/DPMPTSP/2025;Izin Gangguan Tempat Usaha;admin;12/11/2025;14/11/2025;16/11/2025;Selesai;;
+60;60;Sasmi Agamil;Jl. Merdeka No. 11 RT 03 RW 04;81231910841;sasmiagamil@mail.com;600.3.3.2/14/DPMPTSP/2026;Pengajuan Surat Izin;admin;03/09/2025;05/09/2025;07/09/2025;Ditolak;;
+61;61;Ricci Vivi Eka Sanova;Jl. Merdeka No. 86 RT 04 RW 09;81244824149;ricciviviekasan@mail.com;600.3.3.2/15/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;04/08/2025;07/08/2025;;Diproses;;
+62;62;Nuklis;Jl. Merdeka No. 36 RT 01 RW 07;81247519445;nuklis@mail.com;600.3.3.2/19/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;20/11/2025;22/11/2025;;Diproses;;
+63;63;Iswandi;Jl. Merdeka No. 95 RT 01 RW 09;81238341849;iswandi@mail.com;600.1/21/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;11/03/2025;12/03/2025;;Diproses;;
+64;64;Hidawatil Isfanji;Jl. Merdeka No. 57 RT 10 RW 02;81296183116;hidawatilisfanj@mail.com;600.3.3.2/23/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;07/08/2025;09/08/2025;12/08/2025;Ditolak;;
+65;65;Ernita;Jl. Merdeka No. 3 RT 01 RW 06;81216126477;ernita@mail.com;600.3.3.2/25/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;27/12/2025;29/12/2025;;Diproses;;
+66;66;Sukarsi;Jl. Merdeka No. 145 RT 06 RW 03;81280597826;sukarsi@mail.com;600.3.3.2/26/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;06/07/2025;09/07/2025;12/07/2025;Selesai;;
+67;67;Zulhaimi;Jl. Merdeka No. 30 RT 08 RW 04;81241961165;zulhaimi@mail.com;600.3.3.2/24/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;17/09/2025;19/09/2025;;Diproses;;
+68;68;Kanti Prihartini;Jl. Merdeka No. 72 RT 05 RW 01;81213676318;kantiprihartini@mail.com;600.3.3.2/27/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;26/06/2025;28/06/2025;;Diproses;;
+69;69;Yasni. S;Jl. Merdeka No. 39 RT 10 RW 01;81250945298;yasnis@mail.com;600.3.3.2/33/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;26/02/2025;27/02/2025;;Diproses;;
+70;70;Enifa Maidesrita;Jl. Merdeka No. 131 RT 02 RW 08;81241568759;enifamaidesrita@mail.com;600.1/42/DPMPTSP/2026;Permohonan Izin Operasional Klinik;admin;29/04/2025;02/05/2025;05/05/2025;Selesai;;
+71;71;Iti Sumarni;Jl. Merdeka No. 122 RT 09 RW 04;81240897783;itisumarni@mail.com;600.1/43/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;19/06/2025;21/06/2025;;Diproses;;
+72;72;Ajis Putra Nedi an Simarni;Jl. Merdeka No. 46 RT 05 RW 07;81245876878;ajisputranedisi@mail.com;600.3.3.2/44/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;02/05/2025;04/05/2025;08/05/2025;Selesai;;
+73;73;Dian Filzah Aytis an Atmiati;Jl. Merdeka No. 42 RT 09 RW 11;81252623130;difilzahaytisat@mail.com;600.3.3.2/52/DPMPTSP/2026;Permohonan Izin Operasional Klinik;admin;28/11/2025;01/12/2025;;Diproses;;
+74;74;Sukadi an Sarimin, Sami, Sagiman;Jl. Merdeka No. 27 RT 03 RW 05;81299398978;sukadisariminsa@mail.com;600.3.3.2/57/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;04/06/2025;07/06/2025;14/06/2025;Selesai;;
+75;75;Ajis Putra Nedi an Sukar Dinalis;Jl. Merdeka No. 114 RT 03 RW 09;81283902247;ajisputranedisu@mail.com;600.3.3.2/53/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;19/02/2025;21/02/2025;;Diproses;;
+76;76;Yong Hendri;Jl. Merdeka No. 40 RT 08 RW 06;81288857585;yonghendri@mail.com;600.3.3.2/63/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;10/09/2025;11/09/2025;15/09/2025;Selesai;;
+77;77;Yodion Eka Putra;Jl. Merdeka No. 121 RT 02 RW 03;81247052306;yodionekaputra@mail.com;600.3.3.2/69/DPMPTSP/2026;Permohonan Izin Operasional Klinik;admin;07/12/2025;08/12/2025;11/12/2025;Selesai;;
+78;78;Mohammad Husein 2;Jl. Merdeka No. 65 RT 12 RW 06;81210761696;mohammadhusein2@mail.com;600.1/73/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;03/10/2025;05/10/2025;12/10/2025;Selesai;;
+79;79;Rizatil Hayati;Jl. Merdeka No. 108 RT 06 RW 04;81227253225;rizatilhayati@mail.com;600.3.3.2/88/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;28/01/2025;30/01/2025;06/02/2025;Selesai;;
+80;80;Nurhayati;Jl. Merdeka No. 60 RT 02 RW 09;81252789685;nurhayati@mail.com;600.3.3.2/66/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;05/02/2025;06/02/2025;;Diproses;;
+81;81;Sukadi an Slamet Riyadi;Jl. Merdeka No. 37 RT 06 RW 11;81265495580;sukadislametriy@mail.com;600.1/119/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;27/03/2025;28/03/2025;02/04/2025;Ditolak;;
+82;82;Yuliarni;Jl. Merdeka No. 76 RT 02 RW 02;81248887504;yuliarni@mail.com;600.1/120/DPMPTSP/2026;Pengajuan Surat Izin;admin;27/02/2025;28/02/2025;;Diproses;;
+83;83;Umar Dt. Rajo Indo;Jl. Merdeka No. 91 RT 07 RW 02;81252132102;umardtrajoindo@mail.com;600.3.3.2/122/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;15/10/2025;18/10/2025;;Diproses;;
+84;84;Buyung;Jl. Merdeka No. 95 RT 03 RW 01;81235948790;buyung@mail.com;600.3.3.2/123/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;01/04/2025;04/04/2025;;Diproses;;
+85;85;Rince Oktasari;Jl. Merdeka No. 60 RT 11 RW 05;81226925658;rinceoktasari@mail.com;600.3.3.2/102/DPMPTSP/2026;Pengajuan Surat Izin;admin;16/07/2025;18/07/2025;;Diproses;;
+86;86;Yondra Zubir;Jl. Merdeka No. 124 RT 03 RW 01;81242170749;yondrazubir@mail.com;600.3.3.2/108/DPMPTSP/2026;Permohonan Izin Mendirikan Bangunan (IMB);admin;19/09/2025;20/09/2025;;Diproses;;
+87;87;Ajis Putra Nedi an Zakaria Arif;Jl. Merdeka No. 30 RT 10 RW 02;81229383351;ajisputranediza@mail.com;600.3.3.2/109/DPMPTSP/2026;Pendaftaran Tanda Daftar Perusahaan (TDP);admin;25/06/2025;26/06/2025;;Diproses;;
+88;88;Baradi;Jl. Merdeka No. 42 RT 04 RW 10;81242113001;baradi@mail.com;600.3.3.2/138/DPMPTSP/2026;Izin Gangguan Tempat Usaha;admin;13/12/2025;14/12/2025;;Diproses;;
+89;89;Andika;tes;81369712870;andika@mail.com;600.3.3.10/138/DPMPTSP/2026;tes;admin;21/06/2026;;;Diproses;;
+90;90;abdi maulana;test;81249323077;abdimaulana@mail.com;999/006/DPMPTSP/2026;test;abdi maulana;27/06/2026;;;Diproses;;

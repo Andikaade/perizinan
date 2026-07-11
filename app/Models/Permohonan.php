@@ -12,10 +12,10 @@ class Permohonan extends Model
     protected $fillable = [
         'no_pengajuan',
         'nama_pemohon',
+        'no_surat',
         'alamat',
         'phone',
         'email',
-        'no_surat',
         'jenis_surat',
         'tgl_pengajuan',
         'tgl_proses',

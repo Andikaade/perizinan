@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use App\Models\Permohonan;
 use Carbon\Carbon;
 
@@ -14,88 +14,72 @@ class PermohonanSeeder extends Seeder
      */
     public function run(): void
     {
-       // Kosongkan tabel terlebih dahulu
+        // 1. Kosongkan tabel terlebih dahulu agar tidak duplikat saat dijalankan ulang
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         Permohonan::truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
-        $csvFile = database_path('data/permohonan.csv');
+        $this->command->info("Sedang membuat 20 data permohonan simulasi...");
 
-        if (!file_exists($csvFile)) {
-            $this->command->error("File CSV tidak ditemukan!");
-            return;
-        }
+        // Array bantuan untuk variasi data dummy
+        $daftarNama = [
+            'Rian Wijaya', 'Siti Aminah', 'Budi Santoso', 'Dewi Lestari', 'Ahmad Fauzi',
+            'PT. Maju Mundur Sejahtera', 'CV. Berkah Abadi', 'Roni Purwanto', 'Eka Sari', 'Hendra Kusuma',
+            'PT. Sinar Jaya Teknik', 'Slamet Riyadi', 'Yuliani', 'Umar Dt. Rajo Indo', 'Buyung',
+            'Rince Oktasari', 'Yondra Zubir', 'Ajis Putra Nedi', 'Rozalina', 'Syafrial'
+        ];
 
-        $file = fopen($csvFile, 'r');
+        $daftarJenisSurat = [
+            'Pendaftaran Tanda Daftar Perusahaan (TDP)',
+            'Permohonan Izin Mendirikan Bangunan (IMB)',
+            'Izin Gangguan Tempat Usaha',
+            'Permohonan Izin Operasional Klinik',
+            'Pengajuan Surat Izin'
+        ];
 
-        // Ambil baris pertama sebagai header, lalu bersihkan whitespace/karakter aneh
-        $header = fgetcsv($file);
-        $header = array_map('trim', $header);
+        // Daftar status bervariasi sesuai kebutuhan testing Anda
+        $daftarStatus = ['Menunggu', 'Proses', 'Selesai'];
 
-        // Otomatis mencari nomor urut kolom berdasarkan nama header di Google Sheets Anda
-        $indexNoAntrian   = array_search('no_antrian', $header);
-        $indexNama        = array_search('nama_pemohon', $header);
-        $indexDeskripsi   = array_search('deskripsi_surat', $header);
-        $indexPhone       = array_search('phone', $header);
-        $indexAlamat      = array_search('alamat', $header);
-        $indexTglPengajuan = array_search('tgl_pengajuan', $header);
-        $indexTglProses   = array_search('tgl_proses', $header);
-        $indexTglSelesai  = array_search('tgl_selesal', $header); // Sesuaikan jika ada typo 'tgl_selesal' di sheet
-        if ($indexTglSelesai === false) {
-            $indexTglSelesai = array_search('tgl_selesai', $header);
-        }
-        $indexStatus      = array_search('status', $header);
+        // 2. Lakukan looping untuk membuat 20 data
+        for ($i = 1; $i <= 20; $i++) {
 
-        $this->command->info("Sedang memproses baris data CSV...");
+            // Mengatur variasi tanggal pengajuan (misal: mundur beberapa hari ke belakang)
+            $hariMundur = 20 - $i;
+            $carbonTgl = Carbon::now()->subDays($hariMundur);
+            $tglPengajuan = $carbonTgl->format('Y-m-d');
+            $datePrefix = $carbonTgl->format('Ymd');
 
-       while (($row = fgetcsv($file)) !== FALSE) {
-            if (empty($row) || !isset($row[$indexNama])) continue;
+            // Format No Pengajuan: PRZ-YYYYMMDD-0001 sampai PRZ-YYYYMMDD-0020
+            $noUrutPadded = str_pad($i, 4, '0', STR_PAD_LEFT);
+            $noPengajuan = "PRZ-{$datePrefix}-{$noUrutPadded}";
 
-            // 1. Ambil status asli dari CSV, bersihkan spasi, dan paksa jadi huruf kecil semua untuk memudahkan pengecekan
-            $statusAsli = isset($row[$indexStatus]) ? trim(strtolower($row[$indexStatus])) : '';
+            // Pilih data acak/bergantian dari array bantuan di atas
+            $namaPemohon = $daftarNama[$i - 1];
+            $jenisSurat  = $daftarJenisSurat[$i % count($daftarJenisSurat)];
+            $status      = $daftarStatus[$i % count($daftarStatus)]; // Status bergantian otomatis
 
-            // 2. Normalisasi string ke nilai ENUM resmi database Anda ('Baru'/'Menunggu', 'Diproses', 'Selesai', 'Ditolak')
-            if (str_contains($statusAsli, 'proses')) {
-                // Ini akan menangkap kata 'proses', 'dalam proses', maupun 'diproses'
-                $statusDatabase = 'Diproses';
-            } elseif ($statusAsli === 'selesai' || $statusAsli === 'sukses') {
-                $statusDatabase = 'Selesai';
-            } elseif ($statusAsli === 'ditolak' || $statusAsli === 'gagal') {
-                $statusDatabase = 'Ditolak';
-            } else {
-                // Jika status bawaannya 'baru', kosong, atau berupa tanda strip '-', set sesuai keinginan Anda
-                // Ubah ke 'Menunggu' jika ENUM database Anda sudah diganti, atau biarkan 'Baru' jika memakai default awal.
-                $statusDatabase = 'Diproses'; // Fallback aman jika datanya di luar dugaan
-            }
+            // Tentukan tanggal proses dan selesai berdasarkan status
+            $tglProses  = ($status !== 'Menunggu') ? $carbonTgl->addDays(1)->format('Y-m-d') : null;
+            $tglSelesai = ($status === 'Selesai') ? $carbonTgl->addDays(3)->format('Y-m-d') : null;
+
+            // Nomor surat resmi jika status sudah diproses/selesai
+            $noSurat = ($status !== 'Menunggu') ? "640/" . str_pad($i, 3, '0', STR_PAD_LEFT) . "/DPMPTSP/2026" : null;
 
             Permohonan::create([
-                'no_pengajuan'  => $row[$indexNoAntrian] ?? null,
-                'nama_pemohon'  => $row[$indexNama] ?? null,
-                'jenis_surat'   => $row[$indexDeskripsi] ?? null,
-                'phone'         => $row[$indexPhone] ?? null,
-                'alamat'        => (!empty($row[$indexAlamat]) && $row[$indexAlamat] !== '-') ? $row[$indexAlamat] : 'Belum mengisi alamat atau data kosong',
-                'tgl_pengajuan' => $this->parseCsvDate($row[$indexTglPengajuan] ?? null) ?? now()->format('Y-m-d'),
-                'tgl_proses'    => $this->parseCsvDate($row[$indexTglProses] ?? null),
-                'tgl_selesai'   => $this->parseCsvDate($row[$indexTglSelesai] ?? null),
-                'status'        => $statusDatabase,
+                'no_pengajuan'  => $noPengajuan,
+                'nama_pemohon'  => $namaPemohon,
+                'no_surat'      => $noSurat,
+                'jenis_surat'   => $jenisSurat,
+                'phone'         => '0812' . rand(10000000, 99999999),
+                'email'         => strtolower(str_replace(['.', ' '], '', $namaPemohon)) . '@mail.com',
+                'alamat'        => 'Jl. Merdeka No. ' . rand(1, 150) . ' RT ' . rand(1, 12) . ' RW ' . rand(1, 12),
+                'tgl_pengajuan' => $tglPengajuan,
+                'tgl_proses'    => $tglProses,
+                'tgl_selesai'   => $tglSelesai,
+                'status'        => $status,
             ]);
         }
 
-        fclose($file);
-        $this->command->info("Impor data dari web petaru sukses dilakukan!");
-    }
-    /**
-     * Helper untuk mengubah format tanggal dari Google Sheets ke format standard database (Y-m-d)
-     */
-    private function parseCsvDate($dateString)
-    {
-        if (empty($dateString) || $dateString == '-') {
-            return null;
-        }
-
-        try {
-            // Menangani format bawaan Google Sheet seperti "3-Sep-2025" atau "17-Jun-2026"
-            return Carbon::parse($dateString)->format('Y-m-d');
-        } catch (\Exception $e) {
-            return null;
-        }
+        $this->command->info("Selesai! 20 data permohonan dengan status bervariasi berhasil ditambahkan.");
     }
 }
