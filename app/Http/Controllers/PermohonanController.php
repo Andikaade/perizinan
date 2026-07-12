@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Permohonan;
+use App\Exports\PermohonanExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PermohonanController extends Controller
 {
@@ -15,6 +17,8 @@ class PermohonanController extends Controller
         // 1. Ambil keyword pencarian dari input bernama 'search'
         $search = $request->input('search');
         $status = $request->input('status');
+        $tgl_mulai = $request->input('tgl_mulai');
+        $tgl_selesai = $request->input('tgl_selesai');
 
         // 2. Buat query dasar
         $query = Permohonan::query();
@@ -29,6 +33,15 @@ class PermohonanController extends Controller
         // 4. Filter berdasarkan status dari Tab yang aktif (jika ada status yang dipilih)
         if ($status) {
             $query->where('status', $status);
+        }
+
+        // 5. Filter Rentang Tanggal (Fitur Baru)
+        if ($tgl_mulai && $tgl_selesai) {
+            $query->whereBetween('tgl_pengajuan', [$tgl_mulai, $tgl_selesai]);
+        }
+
+        if ($request->filled('tgl_mulai') && $request->filled('tgl_selesai')) {
+            $query->whereBetween('tgl_pengajuan', [$request->tgl_mulai, $request->tgl_selesai]);
         }
 
         // 5. Urutkan dari yang terbaru, lalu gunakan paginate (10 data per halaman)
@@ -172,5 +185,37 @@ class PermohonanController extends Controller
 
         // Redirect kembali ke halaman index dengan session flash message
         return redirect()->route('permohonan.index')->with('success', 'Permohonan berhasil dihapus permanen.');
+    }
+    public function exportExcel(Request $request)
+    {
+        $search = $request->input('search');
+        $status = $request->input('status');
+        $tgl_mulai = $request->input('tgl_mulai');
+        $tgl_selesai = $request->input('tgl_selesai');
+
+        $query = Permohonan::query();
+
+        // Logika filternya disamakan persis dengan fungsi index agar prinsip "Export What You See" bekerja
+        if ($search) {
+            $query->where(function($q) use ($search) {
+                $q->where('no_pengajuan', 'LIKE', "%{$search}%")
+                  ->orWhere('nama_pemohon', 'LIKE', "%{$search}%");
+            });
+        }
+
+        if ($status) {
+            $query->where('status', $status);
+        }
+
+        if ($tgl_mulai && $tgl_selesai) {
+            $query->whereBetween('tgl_pengajuan', [$tgl_mulai, $tgl_selesai]);
+        }
+
+        if ($request->filled('tgl_mulai') && $request->filled('tgl_selesai')) {
+            $query->whereBetween('tgl_pengajuan', [$request->tgl_mulai, $request->tgl_selesai]);
+        }
+
+        // Proses download langsung ke komputer dengan nama file: laporan-permohonan.xlsx
+        return Excel::download(new PermohonanExport($query), 'laporan-permohonan.xlsx');
     }
 }

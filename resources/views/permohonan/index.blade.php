@@ -12,17 +12,25 @@
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
 
             <!-- BAGIAN ATAS TABEL: TOTAL DATA & FORM PENCARIAN -->
-            <div class="p-5 border-b border-slate-200 flex flex-col md:flex-row md:items-center md:justify-between gap-4 bg-slate-50/50">
+            <div class="p-5 border-b border-slate-200 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4 bg-slate-50/50">
                 <div>
                     <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Data Tersimpan: {{ $totalData }}</p>
                 </div>
 
-                <!-- FORM PENCARIAN & DROPDOWN STATUS -->
-                <form action="{{ route('permohonan.index') }}" method="GET" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 max-w-2xl w-full md:justify-end">
+                <!-- FORM PENCARIAN & DROPDOWN STATUS (Diperlebar max-w agar muat filter tanggal) -->
+                <form action="{{ route('permohonan.index') }}" method="GET" class="flex flex-col lg:flex-row items-stretch lg:items-center gap-2 max-w-5xl w-full xl:justify-end">
+
+                    <!-- INPUT FILTER RENTANG TANGGAL BARU -->
+                    <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-2 py-1.5 shadow-sm w-full lg:w-auto">
+                        <span class="text-xs font-bold text-slate-400 uppercase px-1">Periode</span>
+                        <input type="date" name="tgl_mulai" value="{{ request('tgl_mulai') }}" class="border-0 p-0 text-sm text-slate-700 focus:ring-0 focus:outline-none">
+                        <span class="text-slate-300">-</span>
+                        <input type="date" name="tgl_selesai" value="{{ request('tgl_selesai') }}" class="border-0 p-0 text-sm text-slate-700 focus:ring-0 focus:outline-none">
+                    </div>
 
                     <!-- FITUR DROPDOWN STATUS -->
-                    <div class="w-full sm:w-48">
-                        <select name="status" onchange="this.form.submit()" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500 text-slate-700 font-medium">
+                    <div class="w-full lg:w-44">
+                        <select name="status" onchange="this.form.submit()" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm bg-white focus:outline-none focus:border-blue-500 text-slate-700 font-medium shadow-sm">
                             <option value="">-- Semua Status --</option>
                             <option value="Menunggu" {{ request('status') == 'Menunggu' ? 'selected' : '' }}>⏳ Menunggu ({{ $counts['Menunggu'] }})</option>
                             <option value="Proses" {{ request('status') == 'Proses' ? 'selected' : '' }}>⚡ Proses ({{ $counts['Proses'] }})</option>
@@ -32,9 +40,9 @@
                     </div>
 
                     <!-- INPUT TEKS PENCARIAN -->
-                    <div class="relative w-full sm:w-64">
+                    <div class="relative w-full lg:w-56">
                         <input type="text" name="search" value="{{ request('search') }}"
-                               class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 placeholder-slate-400"
+                               class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 placeholder-slate-400 shadow-sm"
                                placeholder="Cari No. Pengajuan / Nama...">
                         <!-- Ikon Kaca Pembesar -->
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -44,16 +52,25 @@
                         </div>
                     </div>
 
-                    <!-- TOMBOL AKSI -->
-                    <div class="flex items-center gap-2">
-                        @if(request('search') || request('status'))
+                    <!-- TOMBOL AKSI & TOMBOL EKSPOR (Menyesuaikan deteksi request filter tanggal) -->
+                    <div class="flex items-center gap-2 w-full lg:w-auto">
+                        @if(request('search') || request('status') || request('tgl_mulai') || request('tgl_selesai'))
                             <a href="{{ route('permohonan.index') }}" class="px-3 py-2 bg-slate-200 hover:bg-slate-300 text-slate-600 text-xs font-semibold rounded-lg transition text-center whitespace-nowrap">
                                 Reset Filter
                             </a>
                         @endif
-                        <button type="submit" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold rounded-lg shadow-sm transition w-full sm:w-auto">
+
+                        <button type="submit" class="px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold rounded-lg shadow-sm transition w-full lg:w-auto">
                             Cari
                         </button>
+
+                        <!-- TOMBOL EKSPOR EXCEL AUTOMATIS TERFILTER -->
+                        <a href="{{ route('permohonan.export', request()->query()) }}" class="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg shadow-sm transition w-full lg:w-auto whitespace-nowrap">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            Ekspor Excel
+                        </a>
                     </div>
                 </form>
             </div>

@@ -58,7 +58,7 @@
                 <!-- No Surat Internal Dinas (Opsional di Awal) -->
                 <div>
                     <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">No. Surat Resmi (Opsional)</label>
-                    <input type="text" name="no_surat" placeholder="Diisi jika surat sudah terbit"
+                    <input type="text" name="no_surat" placeholder="Diisi dengan No Surat"
                         class="w-full rounded-lg border-slate-200 focus:ring-blue-500 focus:border-blue-500 text-sm">
                 </div>
 
