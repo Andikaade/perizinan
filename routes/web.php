@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PermohonanController;
+use App\Http\Controllers\DataPerizinanController;
 
 
 // Halaman Depan
@@ -46,4 +47,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/permohonan/{id}/edit', [PermohonanController::class, 'edit'])->name('permohonan.edit');
     Route::put('/permohonan/{id}', [PermohonanController::class, 'updateData'])->name('permohonan.updateData');
 
+});
+// Group rute untuk manajemen verifikasi internal
+Route::prefix('admin/verifikasi')->name('verifikasi.')->group(function () {
+    // 1. Halaman daftar antrean berkas masuk (Menu: Verifikasi / Validasi)
+    Route::get('/', [DataPerizinanController::class, 'index'])->name('index');
+
+    // 2. Halaman detail untuk memeriksa berkas digital satu per satu
+    Route::get('/{id}', [DataPerizinanController::class, 'show'])->name('show');
+
+    // 3. Proses mengubah status berkas (Aksi Setuju / Tolak)
+    Route::put('/{id}/validasi', [DataPerizinanController::class, 'update'])->name('update');
 });

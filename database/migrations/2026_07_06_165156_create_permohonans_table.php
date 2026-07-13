@@ -28,6 +28,7 @@ return new class extends Migration
             $table->enum('status', ['Menunggu', 'Proses', 'Selesai', 'Ditolak'])->default('Menunggu');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

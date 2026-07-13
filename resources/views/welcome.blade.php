@@ -13,11 +13,11 @@
                             <h1 class="header">
                                 Di Website <span class="text-custom-yellow"> Perizinan Tata Ruang </span>Kab. <span class="text-custom-yellow"> Sijunjung </span>
                             </h1>
-                            <p class="support">Silahkan Masukan no antrian anda</p>
+                            <p class="support">Silahkan Masukan no pengajuan anda</p>
                             <div class="col-12 col-md-10 col-lg-9">
                                 <form action="" method="POST" class="d-flex gap-2" role="search">
                                     @csrf
-                                    <input class="form-control px-4 py-2 input-antrian" type="text" name="no_antrian" placeholder="Masukan no antrian" value="{{ $keyword ?? '' }}" required>
+                                    <input class="form-control px-4 py-2 input-antrian" type="text" name="no_antrian" placeholder="Masukan no pengajuan" value="{{ $keyword ?? '' }}" required>
                                     <button class="btn btn-warning px-4 btn-cari-antrian" type="submit">Cari</button>
                                 </form>
                             </div>

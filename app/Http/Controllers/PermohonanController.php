@@ -184,7 +184,8 @@ class PermohonanController extends Controller
         $permohonan->delete();
 
         // Redirect kembali ke halaman index dengan session flash message
-        return redirect()->route('permohonan.index')->with('success', 'Permohonan berhasil dihapus permanen.');
+        return redirect()->route('permohonan.index')
+                     ->with('success', 'Data permohonan berhasil dipindahkan ke tempat sampah.');
     }
     public function exportExcel(Request $request)
     {
