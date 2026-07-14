@@ -15,17 +15,65 @@
                             </h1>
                             <p class="support">Silahkan Masukan no pengajuan anda</p>
                             <div class="col-12 col-md-10 col-lg-9">
-                                <form action="" method="POST" class="d-flex gap-2" role="search">
+                                <form action="{{ route('perizinan.search') }}" method="POST" class="d-flex gap-2" role="search">
                                     @csrf
-                                    <input class="form-control px-4 py-2 input-antrian" type="text" name="no_antrian" placeholder="Masukan no pengajuan" value="{{ $keyword ?? '' }}" required>
+                                    <input class="form-control px-4 py-2 input-antrian" type="text" name="no_pengajuan" placeholder="Masukan no pengajuan" value="{{ request('no_pengajuan') }}" required>
                                     <button class="btn btn-warning px-4 btn-cari-antrian" type="submit">Cari</button>
                                 </form>
                             </div>
-                            {{-- <div class="col-12 col-md-10 col-lg-9">
-                                <div class="justify-center m-3">
-                                    <a href="#" class="btn btn-success">Ajukan Permohonan</a>
-                                </div>
-                            </div> --}}
+
+                            <div class="col-12 col-md-10 col-lg-9 mt-4">
+                                @if(session('error_cari'))
+                                    <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm" role="alert">
+                                        ❌ {{ session('error_cari') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                @endif
+
+                                <!-- Tempat menampilkan hasil status jika permohonan ditemukan -->
+                                @if(isset($permohonan))
+                                    <div class="card border-0 shadow-sm rounded-3 p-4 mb-4" style="background-color: #f0fdfa; border-left: 4px solid #0d9488 !important;">
+                                        <h5 class="fw-bold text-dark mb-3" style="font-size: 1.1rem;">📋 Hasil Pelacakan Berkas</h5>
+
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless table-sm mb-0 text-dark" style="font-size: 0.95rem;">
+                                                <tr>
+                                                    <td style="width: 35%;" class="fw-bold text-muted">No. Pengajuan</td>
+                                                    <td style="width: 5%;">:</td>
+                                                    <td class="fw-bold text-primary">{{ $permohonan->no_pengajuan }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold text-muted">Nama Pemohon</td>
+                                                    <td>:</td>
+                                                    <td>{{ $permohonan->nama_pemohon }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold text-muted">Jenis Surat</td>
+                                                    <td>:</td>
+                                                    <td>{{ $permohonan->jenis_surat }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold text-muted">Status Berkas</td>
+                                                    <td>:</td>
+                                                    <td>
+                                                        @if($permohonan->status === 'Menunggu')
+                                                            <span class="badge bg-secondary px-2.5 py-1.5">Menunggu Verifikasi</span>
+                                                        @elseif($permohonan->status === 'Proses')
+                                                            <span class="badge bg-warning text-dark px-2.5 py-1.5">Sedang Diproses</span>
+                                                        @elseif($permohonan->status === 'Selesai')
+                                                            <span class="badge bg-success px-2.5 py-1.5">Izin Terbit 🎉</span>
+                                                        @else
+                                                            <span class="badge bg-danger px-2.5 py-1.5">Ditolak / Perlu Perbaikan</span>
+                                                        @endif
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                @endif
+                            </div>
+
+
                         </div>
                         <div class="col-lg-6 col-12 text-center">
                             <a href="#">
@@ -98,6 +146,101 @@
                         Setelah berkas dinyatakan lolos verifikasi kesesuaian tata ruang dan disetujui, Surat Keputusan (SK) resmi dapat langsung Anda ambil di loket pelayanan kantor Dinas Perizinan Kabupaten Sijunjung.
                     </p>
                     <a href="#tentang_kami" class="btn btn-secondary px-4 py-2 fw-semibold shadow-sm" style="border-radius: 8px;">Lihat Lokasi Kantor</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Form Pengajuan -->
+    <section id="pengajuan" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <span class="text-warning fw-bold text-uppercase tracking-wider" style="font-size: 0.85rem;">Layanan Mandiri</span>
+                        <h2 class="fw-bold text-dark mt-1">Formulir Pengajuan Perizinan</h2>
+                        <p class="text-muted">Silakan isi data di bawah ini secara lengkap untuk mengajukan perizinan tata ruang.</p>
+                    </div>
+
+                    <!-- Tampilkan Alert Sukses / Error jika ada proses simpan -->
+                    @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show border-0 shadow-sm mb-4" role="alert">
+                            🎉 {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    @if(session('error_cari'))
+                        <div class="alert alert-danger alert-dismissible fade show border-0 shadow-sm mb-4" role="alert">
+                            ❌ {{ session('error_cari') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    <div class="card border-0 shadow-sm rounded-3 p-4 p-md-5 bg-white">
+                        <!-- Ditambahkan enctype agar bisa upload file berkas -->
+                        <form action="{{ route('pengajuan.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+
+                            <!-- Nama Pemohon (Sesuai tabel permohonans) -->
+                            <div class="mb-4">
+                                <label for="nama_pemohon" class="form-label fw-bold text-dark text-sm">Nama Lengkap Pemohon</label>
+                                <input type="text" class="form-control px-3 py-2" id="nama_pemohon" name="nama_pemohon" placeholder="Masukkan nama sesuai KTP" required>
+                            </div>
+
+                            <!-- No HP & Email berjejer (Sesuai tabel permohonans: phone & email) -->
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <label for="phone" class="form-label fw-bold text-dark text-sm">Nomor WhatsApp / HP</label>
+                                    <input type="tel" class="form-control px-3 py-2" id="phone" name="phone" placeholder="Contoh: 08123456789" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold text-dark text-sm">Alamat Email</label>
+                                    <input type="email" class="form-control px-3 py-2" id="email" name="email" placeholder="contoh@email.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Jenis Surat (Sesuai tabel permohonans: jenis_surat) -->
+                            <div class="mb-4">
+                                <label for="jenis_surat" class="form-label fw-bold text-dark text-sm">Jenis Perizinan / Surat</label>
+                                <select class="form-select px-3 py-2" id="jenis_surat" name="jenis_surat" required>
+                                    <option value="" selected disabled>-- Pilih Jenis Surat --</option>
+                                    <option value="Keterangan Rencana Kabupaten (KRK)">Keterangan Rencana Kabupaten (KRK)</option>
+                                    <option value="Izin Pemanfaatan Ruang (IPR)">Izin Pemanfaatan Ruang (IPR)</option>
+                                    <option value="Rekomendasi Tata Ruang">Rekomendasi Tata Ruang</option>
+                                </select>
+                            </div>
+
+                            <!-- Alamat (Sesuai tabel permohonans: alamat yang ditambahkan via migration terpisah) -->
+                            <div class="mb-4">
+                                <label for="alamat" class="form-label fw-bold text-dark text-sm">Alamat / Lokasi yang Diajukan</label>
+                                <textarea class="form-control px-3 py-2" id="alamat" name="alamat" rows="3" placeholder="Tuliskan alamat lengkap lokasi objek perizinan..." required></textarea>
+                            </div>
+
+                            <!-- Upload Berkas Pendukung (Menuju tabel permohonan_dokumens) -->
+                            <div class="mb-4 border rounded-3 p-3 bg-light">
+                                <label class="form-label fw-bold text-dark d-block mb-2">📁 Dokumen Persyaratan</label>
+                                <span class="text-muted d-block mb-3 text-xs" style="font-size: 0.8rem;">Format berkas yang didukung hanya **PDF, JPG, atau PNG** (Maks. 2MB per file).</span>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="dokumen_ktp" class="form-label text-sm text-secondary fw-semibold">1. Scan KTP Pemohon</label>
+                                        <input class="form-control form-control-sm" type="file" id="dokumen_ktp" name="dokumen_ktp" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="dokumen_sertifikat" class="form-label text-sm text-secondary fw-semibold">2. Scan Lampiran Dokumen</label>
+                                        <input class="form-control form-control-sm" type="file" id="dokumen_sertifikat" name="dokumen_sertifikat" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-warning fw-bold text-dark py-2.5 shadow-sm">
+                                    🚀 Kirim Pengajuan Perizinan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

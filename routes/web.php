@@ -5,12 +5,19 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PermohonanController;
 use App\Http\Controllers\DataPerizinanController;
+use App\Http\Controllers\LandingPageController;
 
 
 // Halaman Depan
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/', [LandingPageController::class, 'index'])->name('landing');
+Route::post('/perizinan/search', [LandingPageController::class, 'search'])->name('perizinan.search');
+Route::get('/ajukan-perizinan', [LandingPageController::class, 'create'])->name('perizinan.create');
+Route::post('/ajukan-perizinan', [LandingPageController::class, 'store'])->name('perizinan.store');
+
 
 // Autentikasi Bawaan Laravel (Breeze/Jetstream)
 require __DIR__.'/auth.php';
@@ -59,3 +66,6 @@ Route::prefix('admin/verifikasi')->name('verifikasi.')->group(function () {
     // 3. Proses mengubah status berkas (Aksi Setuju / Tolak)
     Route::put('/{id}/validasi', [DataPerizinanController::class, 'update'])->name('update');
 });
+
+Route::post('/pengajuan/store', [DataPerizinanController::class, 'store'])->name('pengajuan.store');
+

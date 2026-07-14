@@ -22,6 +22,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengajuan">Pengajuan</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tentang_kami">Tentang Kami</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                 </ul>
