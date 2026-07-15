@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PermohonanController;
 use App\Http\Controllers\DataPerizinanController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\VerifikasiController;
 
 
 // Halaman Depan
@@ -56,16 +57,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 });
 // Group rute untuk manajemen verifikasi internal
-Route::prefix('admin/verifikasi')->name('verifikasi.')->group(function () {
-    // 1. Halaman daftar antrean berkas masuk (Menu: Verifikasi / Validasi)
-    Route::get('/', [DataPerizinanController::class, 'index'])->name('index');
+Route::middleware(['auth'])->prefix('verifikasi')->name('verifikasi.')->group(function () {
 
-    // 2. Halaman detail untuk memeriksa berkas digital satu per satu
-    Route::get('/{id}', [DataPerizinanController::class, 'show'])->name('show');
-
-    // 3. Proses mengubah status berkas (Aksi Setuju / Tolak)
-    Route::put('/{id}/validasi', [DataPerizinanController::class, 'update'])->name('update');
+    Route::get('/', [VerifikasiController::class, 'index'])->name('index');
+    Route::get('/{id}', [VerifikasiController::class, 'show'])->name('show');
+    Route::put('/{id}/validasi', [VerifikasiController::class, 'update'])->name('update');
 });
 
+// Route penyimpanan pengajuan dari depan (tetap di luar jika publik, atau pindahkan ke dalam auth jika wajib login)
 Route::post('/pengajuan/store', [DataPerizinanController::class, 'store'])->name('pengajuan.store');
-

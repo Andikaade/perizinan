@@ -25,7 +25,7 @@ class DataPerizinanController extends Controller
         ->latest()
         ->paginate(10);
 
-        return view('admin.verifikasi.index', compact('antrean'));
+        return view('verifikasi.index', compact('antrean'));
     }
 
     /**
@@ -153,9 +153,11 @@ class DataPerizinanController extends Controller
     public function show($id)
     {
         // Mengambil data permohonan beserta semua dokumen pendukungnya
-        $permohonan = Permohonan::with('dokumens')->findOrFail($id);
+        // $permohonan = Permohonan::with('dokumens')->findOrFail($id);
 
-        return view('admin.verifikasi.show', compact('permohonan'));
+        // return view('verifikasi.show', compact('permohonan'));
+
+
 
     }
 
