@@ -25,13 +25,22 @@
             <span>Semua Permohonan</span>
         </a>
 
-        <a href="{{ route('verifikasi.index') }}" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-900 hover:text-white transition duration-200 text-slate-400">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+        <a href="{{ route('verifikasi.index') }}"
+        class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition duration-200
+        {{ request()->routeIs('verifikasi.index') || request()->routeIs('verifikasi.show') ? 'bg-blue-600 text-white font-medium' : 'text-slate-400 hover:bg-slate-900 hover:text-white' }}">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+            </svg>
             <span>Verifikasi / Validasi</span>
         </a>
 
-        <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-900 hover:text-white transition duration-200 text-slate-400">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path></svg>
+        <!-- 2. Menu Penerbitan Surat Izin -->
+        <a href="{{ route('verifikasi.penerbitan.index') }}"
+        class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition duration-200
+        {{ request()->routeIs('verifikasi.penerbitan.*') ? 'bg-blue-600 text-white font-medium' : 'text-slate-400 hover:bg-slate-900 hover:text-white' }}">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"></path>
+            </svg>
             <span>Penerbitan Surat Izin</span>
         </a>
 

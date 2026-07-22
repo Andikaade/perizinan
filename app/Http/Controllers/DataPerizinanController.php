@@ -17,8 +17,7 @@ class DataPerizinanController extends Controller
      */
     public function index()
     {
-        // Kita hanya mengambil permohonan yang berstatus 'Menunggu' atau 'Proses'
-        // dan yang memiliki berkas dokumen (untuk membedakan dengan jalur manual jika diperlukan)
+
         $antrean = Permohonan::with('dokumens')
         ->has('dokumens')
         ->whereIn('status', ['Menunggu', 'Proses'])
@@ -51,8 +50,6 @@ class DataPerizinanController extends Controller
             'dokumen_ktp'  => 'required|file|mimes:pdf,jpg,jpeg,png|max:2048',
             'dokumen_sertifikat' => 'required|file|mimes:pdf,jpg,jpeg,png|max:2048',
         ]);
-
-        // Gunakan Database Transaction agar jika salah satu upload gagal, data tidak pincang
         DB::beginTransaction();
 
         try {
@@ -114,22 +111,17 @@ class DataPerizinanController extends Controller
                 }
             }
 
-            // ==================== KODE BARU: KIRIM EMAIL NOTIFIKASI ====================
-            // Siapkan data minimal yang ingin ditampilkan di dalam template email
+            //Email
             $dataEmail = [
                 'no_pengajuan' => $noPengajuan,
                 'nama_pemohon' => $request->nama_pemohon,
                 'jenis_surat'  => $request->jenis_surat
             ];
 
-            // Kirim email ke alamat email yang dimasukkan oleh pemohon di formulir
             Mail::to($request->email)->send(new PengajuanSuksesMail($dataEmail));
-            // ===========================================================================
 
-            // Jika semua berhasil, komit data ke database
             DB::commit();
 
-            // Kembalikan ke halaman sebelumnya dengan membawa pesan sukses dan nomor regis
             return redirect('/')
                 ->with('success', "Pengajuan berhasil dikirim! Silakan catat Nomor Pengajuan Anda untuk pelacakan berkas: {$noPengajuan}")
                 ->withFragment('pengajuan');
@@ -138,9 +130,6 @@ class DataPerizinanController extends Controller
             // Jika ada error, batalkan semua perubahan data database dan file
             DB::rollBack();
 
-            // return redirect('/')
-            //     ->with('error_cari', 'Terjadi kesalahan sistem saat menyimpan pengajuan. Silakan coba beberapa saat lagi.')
-            //     ->withFragment('pengajuan');
             return redirect('/')
                 ->with('error_cari', 'Gagal menyimpan: ' . $e->getMessage())
                 ->withFragment('pengajuan');
@@ -152,13 +141,7 @@ class DataPerizinanController extends Controller
      */
     public function show($id)
     {
-        // Mengambil data permohonan beserta semua dokumen pendukungnya
-        // $permohonan = Permohonan::with('dokumens')->findOrFail($id);
-
-        // return view('verifikasi.show', compact('permohonan'));
-
-
-
+        //
     }
 
     /**
@@ -186,11 +169,8 @@ class DataPerizinanController extends Controller
             'status' => $request->status,
         ]);
 
-        // Jika status ditolak, kita bisa asumsikan ada catatan yang dikirim ke pemohon
         if ($request->status === 'Ditolak') {
-            // Catatan ini nanti bisa disimpan ke kolom permohonan atau diolah lebih lanjut
-            // Contoh jika Anda punya kolom catatan di tabel permohonans:
-            // $permohonan->update(['catatan_koreksi' => $request->catatan]);
+
         }
 
         return redirect()->route('verifikasi.index')

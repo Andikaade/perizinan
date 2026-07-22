@@ -108,6 +108,13 @@
                                 <a href="{{ route('permohonan.show', $p->id) }}" class="inline-flex items-center gap-1 px-3 py-1.5 border border-slate-200 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-50 transition">
                                     👁 Kelola Berkas
                                 </a>
+                                @if($p->status === 'Selesai' && $p->file_surat)
+                                    <a href="{{ asset('storage/surat_izin/' . $p->file_surat) }}"
+                                    target="_blank"
+                                    class="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-lg shadow-sm transition">
+                                        📄 Lihat Surat
+                                    </a>
+                                @endif
                             </td>
                         </tr>
                         @empty

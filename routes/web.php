@@ -7,6 +7,7 @@ use App\Http\Controllers\PermohonanController;
 use App\Http\Controllers\DataPerizinanController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\VerifikasiController;
+use App\Http\Controllers\PublicValidasiController;
 
 
 // Halaman Depan
@@ -27,7 +28,7 @@ require __DIR__.'/auth.php';
 Route::post('/kontak/kirim', [ContactController::class, 'kirimEmail'])->name('kontak.kirim');
 
 // ----------------------------------------------------
-// SEMUA ROUTE YANG WAJIB LOGIN (AUTH)
+// ROUTE YANG WAJIB LOGIN (AUTH)
 // ----------------------------------------------------
 Route::middleware(['auth', 'verified'])->group(function () {
 
@@ -55,14 +56,22 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/permohonan/{id}/edit', [PermohonanController::class, 'edit'])->name('permohonan.edit');
     Route::put('/permohonan/{id}', [PermohonanController::class, 'updateData'])->name('permohonan.updateData');
 
+    Route::post('/pengajuan/store', [DataPerizinanController::class, 'store'])->name('pengajuan.store');
+
 });
 // Group rute untuk manajemen verifikasi internal
 Route::middleware(['auth'])->prefix('verifikasi')->name('verifikasi.')->group(function () {
 
     Route::get('/', [VerifikasiController::class, 'index'])->name('index');
+
+    Route::get('/penerbitan', [PublicValidasiController::class, 'index'])->name('penerbitan.index');
+    Route::post('/penerbitan/terbitkan/{id}', [PublicValidasiController::class, 'terbitkanSurat'])->name('penerbitan.eksekusi');
+
     Route::get('/{id}', [VerifikasiController::class, 'show'])->name('show');
     Route::put('/{id}/validasi', [VerifikasiController::class, 'update'])->name('update');
+
+
 });
 
-// Route penyimpanan pengajuan dari depan (tetap di luar jika publik, atau pindahkan ke dalam auth jika wajib login)
-Route::post('/pengajuan/store', [DataPerizinanController::class, 'store'])->name('pengajuan.store');
+Route::get('/validasi-surat/{no_pengajuan}', [PublicValidasiController::class, 'verifikasi'])->name('public.validasi.surat');
+Route::get('/validasi-surat/{no_pengajuan}', [PublicValidasiController::class, 'validasiPublic'])->name('public.validasi.surat');

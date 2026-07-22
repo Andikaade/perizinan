@@ -14,7 +14,6 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        // Berdasarkan struktur folder Anda, file view depannya adalah welcome.blade.php
         return view('welcome');
     }
 
@@ -87,7 +86,6 @@ class LandingPageController extends Controller
             return redirect()->route('landing')->with('error_cari', 'Nomor pengajuan tidak ditemukan. Periksa kembali kode Anda.');
         }
 
-        // Diarahkan kembali ke view 'welcome' sambil membawa data hasil pencarian
         return view('welcome', compact('permohonan'));
     }
 }

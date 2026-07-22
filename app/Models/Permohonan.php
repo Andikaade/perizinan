@@ -23,6 +23,7 @@ class Permohonan extends Model
         'tgl_proses',
         'tgl_selesai',
         'status',
+        'file_surat'
     ];
 
     public function dokumens()

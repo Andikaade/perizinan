@@ -45,7 +45,6 @@ class PermohonanController extends Controller
         }
 
         // 5. Urutkan dari yang terbaru, lalu gunakan paginate (10 data per halaman)
-        // withQueryString() memastikan keyword pencarian tidak hilang saat klik tombol halaman selanjutnya
         $permohonans = $query->latest()->paginate(10)->withQueryString();
 
         // 6. Hitung total seluruh data untuk informasi di dashboard
